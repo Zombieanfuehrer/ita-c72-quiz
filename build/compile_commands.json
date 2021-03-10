@@ -1,0 +1,7 @@
+[
+{
+  "directory": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Hauptmenu.dir/includes_C.rsp -g -o CMakeFiles\\Hauptmenu.dir\\menue.c.obj -c C:\\Projekte\\Cpp\\dev\\techniker-pruefung-quiz-2021\\src\\menue.c",
+  "file": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/src/menue.c"
+}
+]
