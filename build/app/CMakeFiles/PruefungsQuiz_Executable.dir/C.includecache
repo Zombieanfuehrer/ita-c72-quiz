@@ -14,7 +14,9 @@ stdlib.h
 string.h
 -
 
-C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/src/menue.c
+C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/app/main.c
+stdio.h
+-
 menue.h
-C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/src/menue.h
+-
 

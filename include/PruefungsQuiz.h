@@ -3,19 +3,11 @@
 
 #define maxFragen 200
 
-enum AUSWAHL {
-    Ende = 0,
-    Quiz,
-    ZufallsQuiz, 
-    FragenLaden,
-    FragenGenerator
-};
-
-struct Fragenfeld
+typedef struct  
 {
     char Frage  [81];
     char Antwort[81];
-};
+}Fragenfeld;
 
 
 #endif // _PRUEFUNGS_QUIZ_

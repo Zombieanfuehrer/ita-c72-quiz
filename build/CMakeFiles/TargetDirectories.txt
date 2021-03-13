@@ -5,5 +5,6 @@ C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/cmake/CMakeFiles/rebuild_
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/Hauptmenu.dir
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/edit_cache.dir
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/rebuild_cache.dir
+C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/app/CMakeFiles/PruefungsQuiz_Executable.dir
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/app/CMakeFiles/edit_cache.dir
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/app/CMakeFiles/rebuild_cache.dir

@@ -1,22 +1,29 @@
 #include "menue.h"
 
-int MENUE (char Optionen [MenuePunkte][Unterpunkt_LEN])
+int MENUE (char ** Unterpunkte)
 {
     char sAuswahl;
     int  nAuswahl;
+    int  nAnzahl = 0;
 
-    printf("Bitte waehlen Sie:\n");
-    for (unsigned int output = 0; output < MenuePunkte; output++)
+    puts("Bitte waehlen Sie:");
+    while (*Unterpunkte != NULL)
     {
-        printf("%d %s\n",output,Optionen[output]);
+        printf("%i: ",nAnzahl);
+        puts(*Unterpunkte);
+        ++Unterpunkte;
+        ++nAnzahl;
     }
-    sscanf_s("%c", &sAuswahl, 1);
-    while(getchar()!='\n');
+
+    puts("\n :");
+    sAuswahl = getc(stdin);
+    if (sAuswahl == EOF){return -1;}
+
     nAuswahl = atoi(&sAuswahl);
-    if (nAuswahl > 0 && nAuswahl <= MenuePunkte)
+    
+    if (nAuswahl >= 0 && nAuswahl <= nAnzahl)
     {
         return (nAuswahl);
     }
-    return -1;
-      
+    return -1;    
 }

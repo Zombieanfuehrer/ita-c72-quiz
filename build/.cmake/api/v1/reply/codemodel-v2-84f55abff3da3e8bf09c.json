@@ -51,7 +51,11 @@
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
-					"source" : "app"
+					"source" : "app",
+					"targetIndexes" : 
+					[
+						1
+					]
 				}
 			],
 			"name" : "Debug",
@@ -68,7 +72,8 @@
 					"name" : "PruefungsQuiz",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -79,6 +84,13 @@
 					"id" : "Hauptmenu::@145eef247bfb46b6828c",
 					"jsonFile" : "target-Hauptmenu-Debug-d17f1ce6bc0b31c96525.json",
 					"name" : "Hauptmenu",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "PruefungsQuiz_Executable::@5f5a17c01335469806cb",
+					"jsonFile" : "target-PruefungsQuiz_Executable-Debug-ecf108b49ea3ffd4c57c.json",
+					"name" : "PruefungsQuiz_Executable",
 					"projectIndex" : 0
 				}
 			]

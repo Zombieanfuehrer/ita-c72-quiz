@@ -128,6 +128,48 @@ depend:
 	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+app/CMakeFiles/PruefungsQuiz_Executable.dir/rule:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 app/CMakeFiles/PruefungsQuiz_Executable.dir/rule
+.PHONY : app/CMakeFiles/PruefungsQuiz_Executable.dir/rule
+
+# Convenience name for target.
+PruefungsQuiz_Executable: app/CMakeFiles/PruefungsQuiz_Executable.dir/rule
+
+.PHONY : PruefungsQuiz_Executable
+
+# fast build rule for target.
+PruefungsQuiz_Executable/fast:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\PruefungsQuiz_Executable.dir\build.make app/CMakeFiles/PruefungsQuiz_Executable.dir/build
+.PHONY : PruefungsQuiz_Executable/fast
+
+main.obj: main.c.obj
+
+.PHONY : main.obj
+
+# target to build an object file
+main.c.obj:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\PruefungsQuiz_Executable.dir\build.make app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.obj
+.PHONY : main.c.obj
+
+main.i: main.c.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\PruefungsQuiz_Executable.dir\build.make app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f app\CMakeFiles\PruefungsQuiz_Executable.dir\build.make app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.s
+.PHONY : main.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -136,6 +178,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... PruefungsQuiz_Executable
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 

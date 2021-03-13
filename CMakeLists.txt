@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.12)
 set(PROJEKT "PruefungsQuiz")
 project("${PROJEKT}" VERSION 1.0.0 LANGUAGES C)
 
+#Applikation / Exectable definieren
+set(MAIN "${PROJEKT}_Executable")
+
 #Libraries definieren
 set(_C_MENU_LIB "Hauptmenu")
 

@@ -1,6 +1,6 @@
-###---Version 1.0---DATE-2020-12-21-######################################
-###---Autor---David-A.-Haufe--(david.haufe90@gmail.com)---################
-###---CMakeLists-fuer-eigene-Libraries---#################################
+###---Version 1.0---DATE-2021-03-12-#########################################
+###---Autor---David-A.-Haufe--(david.haufe90@gmail.com)---###################
+###---CMakeLists-fuer-eigene-Libraries---####################################
 
 ###-----MENUE----------------#####################################
 add_library(${_C_MENU_LIB} OBJECT

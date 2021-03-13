@@ -95,7 +95,7 @@ clean: app/clean
 # Directory level rules for directory app
 
 # Recursive "all" directory target.
-app/all:
+app/all: app/CMakeFiles/PruefungsQuiz_Executable.dir/all
 
 .PHONY : app/all
 
@@ -105,7 +105,7 @@ app/preinstall:
 .PHONY : app/preinstall
 
 # Recursive "clean" directory target.
-app/clean:
+app/clean: app/CMakeFiles/PruefungsQuiz_Executable.dir/clean
 
 .PHONY : app/clean
 
@@ -171,6 +171,33 @@ Hauptmenu: src/CMakeFiles/Hauptmenu.dir/rule
 src/CMakeFiles/Hauptmenu.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Hauptmenu.dir\build.make src/CMakeFiles/Hauptmenu.dir/clean
 .PHONY : src/CMakeFiles/Hauptmenu.dir/clean
+
+#=============================================================================
+# Target rules for target app/CMakeFiles/PruefungsQuiz_Executable.dir
+
+# All Build rule for target.
+app/CMakeFiles/PruefungsQuiz_Executable.dir/all: src/CMakeFiles/Hauptmenu.dir/all
+	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\PruefungsQuiz_Executable.dir\build.make app/CMakeFiles/PruefungsQuiz_Executable.dir/depend
+	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\PruefungsQuiz_Executable.dir\build.make app/CMakeFiles/PruefungsQuiz_Executable.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles --progress-num=2,3 "Built target PruefungsQuiz_Executable"
+.PHONY : app/CMakeFiles/PruefungsQuiz_Executable.dir/all
+
+# Build rule for subdir invocation for target.
+app/CMakeFiles/PruefungsQuiz_Executable.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 app/CMakeFiles/PruefungsQuiz_Executable.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles 0
+.PHONY : app/CMakeFiles/PruefungsQuiz_Executable.dir/rule
+
+# Convenience name for target.
+PruefungsQuiz_Executable: app/CMakeFiles/PruefungsQuiz_Executable.dir/rule
+
+.PHONY : PruefungsQuiz_Executable
+
+# clean rule for target.
+app/CMakeFiles/PruefungsQuiz_Executable.dir/clean:
+	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\PruefungsQuiz_Executable.dir\build.make app/CMakeFiles/PruefungsQuiz_Executable.dir/clean
+.PHONY : app/CMakeFiles/PruefungsQuiz_Executable.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

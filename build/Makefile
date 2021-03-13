@@ -141,6 +141,19 @@ Hauptmenu/fast:
 	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Hauptmenu.dir\build.make src/CMakeFiles/Hauptmenu.dir/build
 .PHONY : Hauptmenu/fast
 
+#=============================================================================
+# Target rules for targets named PruefungsQuiz_Executable
+
+# Build rule for target.
+PruefungsQuiz_Executable: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 PruefungsQuiz_Executable
+.PHONY : PruefungsQuiz_Executable
+
+# fast build rule for target.
+PruefungsQuiz_Executable/fast:
+	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\PruefungsQuiz_Executable.dir\build.make app/CMakeFiles/PruefungsQuiz_Executable.dir/build
+.PHONY : PruefungsQuiz_Executable/fast
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -150,6 +163,7 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Hauptmenu
+	@echo ... PruefungsQuiz_Executable
 .PHONY : help
 
 
