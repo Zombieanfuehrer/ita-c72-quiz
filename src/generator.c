@@ -7,7 +7,6 @@ int Fragen_einlesen(Fragenfeld *Quizfragen)
     char cValidInput[1] = {0};
     unsigned int nAnzahlFragen = 0;
 
-    puts("\n");
     puts("Sie haben den Quiz-Generator gestartet!\n");
     puts("Bitte geben Sie die Quiz-Fragen, so wie die Antworten vor.");
     puts("Beenden Sie die Eingabe mit '0'\n");
@@ -44,7 +43,6 @@ int Fragen_einlesen(Fragenfeld *Quizfragen)
         }
         //clear
         bInputValid = false;
-        //memset(&sEingabe,0,maxLEN_F_A);
 
         //Quiz-Antwort eingeben
         while (!bInputValid){

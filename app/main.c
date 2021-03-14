@@ -9,6 +9,7 @@
 
 int main (int argc, char * argv[])
 {
+    //Variablen fuer Menue-Auswahl
     char * Menuepunkte[] = 
     {
         "Exit", 
@@ -19,41 +20,49 @@ int main (int argc, char * argv[])
         NULL
     };
     char **optionen = Menuepunkte;
-
-    Fragenfeld QuizFragen[maxFragen];
-    Fragenfeld *ptrQuizFragen = QuizFragen;
-
     int Menue_Auswahl = -1;
     int Status = -1;
 
-    Status = Fragen_einlesen(ptrQuizFragen);
-    for (size_t i = 0; i < maxFragen; i++)
-    {
-        printf("%i: Frage :> %s \nAntwort :> %s\n",i,(&ptrQuizFragen[i])->Frage,(&ptrQuizFragen[i])->Antwort);
-    }
-    
-    Menue_Auswahl = MENUE(optionen);
+    //Record fuer Fragen u. Antworten
+    Fragenfeld QuizFragen[maxFragen];
+    Fragenfeld *ptrQuizFragen = QuizFragen;
 
-    switch (Menue_Auswahl)
-    {
-    case Exit:
-        /* code */
-        break;
-    case StartQuiz:
-        /* code */
-        break;
-    case RandomQuestions:
-        /* code */
-        break;
-    case LoadQuestions:
-        /* code */
-        break;
-    case Generator:
-        break;
-    default:
-        break;
-    }
+    //Record initialisieren
+    memset(ptrQuizFragen,0,sizeof(QuizFragen));
 
+    //Hauptmenue
+    do
+    { 
+        //Hauptmenue Funktion aufrufen 
+        Menue_Auswahl = MENUE(optionen);
+
+        switch (Menue_Auswahl)
+        {
+        case Exit:
+            /* code */
+            break;
+        case StartQuiz:
+            //Fragen vorhanden?
+            if (*ptrQuizFragen->Frage){
+                
+            }else{
+                fprintf(stderr,"Noch keine Quiz-Fragen vorhanden!\nFragen laden oder ueber Generator erstellen.\n");
+            }
+            break;
+        case RandomQuestions:
+            /* code */
+            break;
+        case LoadQuestions:
+            /* code */
+            break;
+        case Generator:
+            Fragen_einlesen(ptrQuizFragen);
+            break;
+        default:
+            fprintf(stderr,"Eingabe Ungueltig!\n");
+            break;
+        }
+    } while (Menue_Auswahl != 0);
 
     return 0;
 }

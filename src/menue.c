@@ -2,7 +2,7 @@
 
 int MENUE (char **Unterpunkte)
 {
-    char sAuswahl;
+    char sAuswahl[1] = {0};
     int  nAuswahl;
     int  nAnzahl = 0;
 
@@ -14,12 +14,13 @@ int MENUE (char **Unterpunkte)
         ++Unterpunkte;
         ++nAnzahl;
     }
-
-    sAuswahl = getc(stdin);
-    if (sAuswahl == EOF){return -1;}
-
-    nAuswahl = atoi(&sAuswahl);
+    //User-Auswahl einlesen
+    scanf("%c",&sAuswahl[0]);
+    while(getchar()!='\n'){}
+    if (sAuswahl == 0){return -1;}
     
+    //Auswahl von ASCII in int wandeln und zurueckgeben
+    nAuswahl = atoi(&(*sAuswahl));   
     if (nAuswahl >= 0 && nAuswahl <= nAnzahl)
     {
         return (nAuswahl);
