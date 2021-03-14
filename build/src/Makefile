@@ -143,6 +143,48 @@ Hauptmenu/fast:
 	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Hauptmenu.dir\build.make src/CMakeFiles/Hauptmenu.dir/build
 .PHONY : Hauptmenu/fast
 
+# Convenience name for target.
+src/CMakeFiles/Quiz_Fragen_Gen.dir/rule:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/Quiz_Fragen_Gen.dir/rule
+.PHONY : src/CMakeFiles/Quiz_Fragen_Gen.dir/rule
+
+# Convenience name for target.
+Quiz_Fragen_Gen: src/CMakeFiles/Quiz_Fragen_Gen.dir/rule
+
+.PHONY : Quiz_Fragen_Gen
+
+# fast build rule for target.
+Quiz_Fragen_Gen/fast:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_Gen.dir\build.make src/CMakeFiles/Quiz_Fragen_Gen.dir/build
+.PHONY : Quiz_Fragen_Gen/fast
+
+generator.obj: generator.c.obj
+
+.PHONY : generator.obj
+
+# target to build an object file
+generator.c.obj:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_Gen.dir\build.make src/CMakeFiles/Quiz_Fragen_Gen.dir/generator.c.obj
+.PHONY : generator.c.obj
+
+generator.i: generator.c.i
+
+.PHONY : generator.i
+
+# target to preprocess a source file
+generator.c.i:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_Gen.dir\build.make src/CMakeFiles/Quiz_Fragen_Gen.dir/generator.c.i
+.PHONY : generator.c.i
+
+generator.s: generator.c.s
+
+.PHONY : generator.s
+
+# target to generate assembly for a file
+generator.c.s:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_Gen.dir\build.make src/CMakeFiles/Quiz_Fragen_Gen.dir/generator.c.s
+.PHONY : generator.c.s
+
 menue.obj: menue.c.obj
 
 .PHONY : menue.obj
@@ -179,6 +221,10 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Hauptmenu
+	@echo ... Quiz_Fragen_Gen
+	@echo ... generator.obj
+	@echo ... generator.i
+	@echo ... generator.s
 	@echo ... menue.obj
 	@echo ... menue.i
 	@echo ... menue.s

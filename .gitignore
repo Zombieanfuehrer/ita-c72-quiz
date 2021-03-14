@@ -1,0 +1,7 @@
+#Datein und Strukturen die nicht gepusht/commitet werden
+#Keine Binaries 
+/build
+#Keine Dokumentation
+/docs/html
+#Workspace
+/.vscode

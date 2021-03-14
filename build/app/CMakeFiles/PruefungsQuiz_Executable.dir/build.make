@@ -95,10 +95,12 @@ PruefungsQuiz_Executable_OBJECTS = \
 
 # External object files for target PruefungsQuiz_Executable
 PruefungsQuiz_Executable_EXTERNAL_OBJECTS = \
-"C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/Hauptmenu.dir/menue.c.obj"
+"C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/Hauptmenu.dir/menue.c.obj" \
+"C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/Quiz_Fragen_Gen.dir/generator.c.obj"
 
 app/PruefungsQuiz_Executable.exe: app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.obj
 app/PruefungsQuiz_Executable.exe: src/CMakeFiles/Hauptmenu.dir/menue.c.obj
+app/PruefungsQuiz_Executable.exe: src/CMakeFiles/Quiz_Fragen_Gen.dir/generator.c.obj
 app/PruefungsQuiz_Executable.exe: app/CMakeFiles/PruefungsQuiz_Executable.dir/build.make
 app/PruefungsQuiz_Executable.exe: app/CMakeFiles/PruefungsQuiz_Executable.dir/linklibs.rsp
 app/PruefungsQuiz_Executable.exe: app/CMakeFiles/PruefungsQuiz_Executable.dir/objects1.rsp

@@ -8,6 +8,7 @@ set(MAIN "${PROJEKT}_Executable")
 
 #Libraries definieren
 set(_C_MENU_LIB "Hauptmenu")
+set(_C_72_GENERATOR "Quiz_Fragen_Gen")
 
 #Unterverzeichnisse einbinden 
 add_subdirectory("${PROJECT_SOURCE_DIR}/cmake/")

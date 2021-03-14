@@ -52,5 +52,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/Hauptmenu.dir/DependInfo.cmake"
+  "src/CMakeFiles/Quiz_Fragen_Gen.dir/DependInfo.cmake"
   "app/CMakeFiles/PruefungsQuiz_Executable.dir/DependInfo.cmake"
   )

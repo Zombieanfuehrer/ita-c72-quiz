@@ -12,3 +12,13 @@ target_include_directories(${_C_MENU_LIB} PUBLIC
 
     "${PROJECT_SOURCE_DIR}/include/"
 )
+###-----GENERATOR----------------#################################
+add_library(${_C_72_GENERATOR} OBJECT
+
+    "${PROJECT_SOURCE_DIR}/src/generator.c"
+
+)
+target_include_directories(${_C_72_GENERATOR} PRIVATE
+
+    "${PROJECT_SOURCE_DIR}/include/"
+)

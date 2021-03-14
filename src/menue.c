@@ -1,6 +1,6 @@
 #include "menue.h"
 
-int MENUE (char ** Unterpunkte)
+int MENUE (char **Unterpunkte)
 {
     char sAuswahl;
     int  nAuswahl;
@@ -15,7 +15,6 @@ int MENUE (char ** Unterpunkte)
         ++nAnzahl;
     }
 
-    puts("\n :");
     sAuswahl = getc(stdin);
     if (sAuswahl == EOF){return -1;}
 

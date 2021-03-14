@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+../include/PruefungsQuiz.h
+
+../include/generator.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+stdbool.h
+-
+PruefungsQuiz.h
+../include/PruefungsQuiz.h
+
 ../include/menue.h
 stdio.h
 -
@@ -17,6 +31,12 @@ string.h
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/app/main.c
 stdio.h
 -
+../include/PruefungsQuiz.h
+C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/include/PruefungsQuiz.h
 menue.h
 -
+generator.h
+-
+
+C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/include/PruefungsQuiz.h
 
