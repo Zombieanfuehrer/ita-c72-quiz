@@ -7,6 +7,7 @@
 #include <stdbool.h>
 
 #include "PruefungsQuiz.h"
+#include "save_fragenfeld.h"
 
 int Fragen_einlesen(Fragenfeld *Quizfragen);
 

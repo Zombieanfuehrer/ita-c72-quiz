@@ -129,6 +129,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src/CMakeFiles/Quiz_Fragen_save.dir/rule:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/Quiz_Fragen_save.dir/rule
+.PHONY : src/CMakeFiles/Quiz_Fragen_save.dir/rule
+
+# Convenience name for target.
+Quiz_Fragen_save: src/CMakeFiles/Quiz_Fragen_save.dir/rule
+
+.PHONY : Quiz_Fragen_save
+
+# fast build rule for target.
+Quiz_Fragen_save/fast:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_save.dir\build.make src/CMakeFiles/Quiz_Fragen_save.dir/build
+.PHONY : Quiz_Fragen_save/fast
+
+# Convenience name for target.
 src/CMakeFiles/Hauptmenu.dir/rule:
 	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/Hauptmenu.dir/rule
 .PHONY : src/CMakeFiles/Hauptmenu.dir/rule
@@ -222,6 +237,7 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Hauptmenu
 	@echo ... Quiz_Fragen_Gen
+	@echo ... Quiz_Fragen_save
 	@echo ... generator.obj
 	@echo ... generator.i
 	@echo ... generator.s

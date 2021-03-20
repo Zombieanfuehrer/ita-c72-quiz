@@ -22,3 +22,13 @@ target_include_directories(${_C_72_GENERATOR} PRIVATE
 
     "${PROJECT_SOURCE_DIR}/include/"
 )
+###-----SAVE_FAGENKATALOG----------------#########################
+add_library(${_C_72_SAVE_FRAGENKATALOG} OBJECT
+
+    "${PROJECT_SOURCE_DIR}/src/save_fragenfeld.c/"
+
+)
+target_include_directories(${_C_72_SAVE_FRAGENKATALOG} PRIVATE
+
+    "${PROJECT_SOURCE_DIR}/include/"
+)

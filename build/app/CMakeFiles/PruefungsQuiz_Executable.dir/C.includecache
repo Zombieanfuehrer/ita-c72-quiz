@@ -19,6 +19,8 @@ stdbool.h
 -
 PruefungsQuiz.h
 ../include/PruefungsQuiz.h
+save_fragenfeld.h
+../include/save_fragenfeld.h
 
 ../include/menue.h
 stdio.h
@@ -27,6 +29,20 @@ stdlib.h
 -
 string.h
 -
+
+../include/save_fragenfeld.h
+stdio.h
+-
+stdbool.h
+-
+time.h
+-
+string.h
+-
+stdlib.h
+-
+PruefungsQuiz.h
+../include/PruefungsQuiz.h
 
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/app/main.c
 stdio.h

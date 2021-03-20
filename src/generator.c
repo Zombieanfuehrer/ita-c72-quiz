@@ -1,6 +1,6 @@
 #include "../include/generator.h"
 
-int Fragen_einlesen(Fragenfeld *Quizfragen)
+int Fragen_einlesen(Fragenfeld *Quizfragen) 
 {
     char *sEingabe = calloc(maxLEN_F_A,sizeof(char));
     bool bInputValid = false;
@@ -20,7 +20,12 @@ int Fragen_einlesen(Fragenfeld *Quizfragen)
             //Fehlerbehandlung
             if(!sEingabe){fprintf(stderr,"Eingabefehler!\n");};
             //User hat eingabe abgebrochen
-            if(sEingabe[0] == '0'){return (nAnzahlFragen-1);}
+            if(sEingabe[0] == '0'){
+                //Anfangsandresse ermitteln fuer param
+                Quizfragen = Quizfragen-nAnzahlFragen;
+                //Aktuelle Fragen in Datei speichern
+                return (nAnzahlFragen-1);
+            }
             //Terminator (von fgets eingefuegt) aus string loeschen
             sEingabe[strcspn(sEingabe, "\n")] = 0;
             //Frage korrekt?
@@ -74,5 +79,9 @@ int Fragen_einlesen(Fragenfeld *Quizfragen)
         //Auf naechstem Struktur-Element positionieren
         ++Quizfragen;
         bInputValid = false;
+        //Adresse mit einem nullptr besetzten. Falls vom user abgebrochen wird ist das Ende des Arrays bekannt.
+        Quizfragen->Frage[0] = 0;
+        Quizfragen->Antwort[0] = 0;
+        
     }
 }
