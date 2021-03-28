@@ -8,10 +8,10 @@ add_executable(${MAIN}
     "${PROJECT_SOURCE_DIR}/app/main.c" 
    
 )
-target_link_libraries(
-    ${MAIN} PRIVATE 
-        ${_C_MENU_LIB}
-        ${_C_72_GENERATOR}
-
+target_link_libraries(${MAIN} PRIVATE 
+        
+    ${_C_MENU_LIB}
+    ${_C_72_SAVE_FRAGENKATALOG}      
+    ${_C_72_GENERATOR}        
 )
 #---------------------------------------------------------------------------#

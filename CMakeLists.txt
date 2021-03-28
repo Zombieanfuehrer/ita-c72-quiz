@@ -15,3 +15,4 @@ set(_C_72_SAVE_FRAGENKATALOG "Quiz_Fragen_save")
 add_subdirectory("${PROJECT_SOURCE_DIR}/cmake/")
 add_subdirectory("${PROJECT_SOURCE_DIR}/src/")
 add_subdirectory("${PROJECT_SOURCE_DIR}/app/")
+

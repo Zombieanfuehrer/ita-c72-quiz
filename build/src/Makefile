@@ -227,6 +227,33 @@ menue.c.s:
 	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Hauptmenu.dir\build.make src/CMakeFiles/Hauptmenu.dir/menue.c.s
 .PHONY : menue.c.s
 
+save_fragenfeld.obj: save_fragenfeld.c.obj
+
+.PHONY : save_fragenfeld.obj
+
+# target to build an object file
+save_fragenfeld.c.obj:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_save.dir\build.make src/CMakeFiles/Quiz_Fragen_save.dir/save_fragenfeld.c.obj
+.PHONY : save_fragenfeld.c.obj
+
+save_fragenfeld.i: save_fragenfeld.c.i
+
+.PHONY : save_fragenfeld.i
+
+# target to preprocess a source file
+save_fragenfeld.c.i:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_save.dir\build.make src/CMakeFiles/Quiz_Fragen_save.dir/save_fragenfeld.c.i
+.PHONY : save_fragenfeld.c.i
+
+save_fragenfeld.s: save_fragenfeld.c.s
+
+.PHONY : save_fragenfeld.s
+
+# target to generate assembly for a file
+save_fragenfeld.c.s:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_save.dir\build.make src/CMakeFiles/Quiz_Fragen_save.dir/save_fragenfeld.c.s
+.PHONY : save_fragenfeld.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -244,6 +271,9 @@ help:
 	@echo ... menue.obj
 	@echo ... menue.i
 	@echo ... menue.s
+	@echo ... save_fragenfeld.obj
+	@echo ... save_fragenfeld.i
+	@echo ... save_fragenfeld.s
 .PHONY : help
 
 
