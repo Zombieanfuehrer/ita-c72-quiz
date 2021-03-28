@@ -5,6 +5,7 @@
 
 #include <menue.h>
 #include <generator.h>
+#include <file_index.h>
 
 
 int main (int argc, char * argv[])
@@ -53,7 +54,12 @@ int main (int argc, char * argv[])
             /* code */
             break;
         case LoadQuestions:
-            /* code */
+            if (Index_Auslesen() != NULL)
+            {
+                printf(":: %s",Index_Auslesen());
+            }else{
+                fprintf(stderr,"Keine gespeicherten Fragen-Kataloge vorhanden\n");
+            }          
             break;
         case Generator:
             Fragen_einlesen(ptrQuizFragen);

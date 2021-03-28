@@ -11,12 +11,12 @@ bool Index_Erweitern(const char * Dateiname)
     //INDEX anlegen
     if(INDEX == NULL){
        //Datei erstellen und oeffnen
-        INDEX = fopen(index_dat,"w+");
+        INDEX = fopen(index_dat,"wb+");
     }else{
         //Datei exestiert, lesenden Zugriff beenden
         fclose(INDEX);
         //Datei schreibend, am Ende anhaengend oeffnen
-        INDEX = fopen(index_dat,"a+");
+        INDEX = fopen(index_dat,"ab+");
     }
     //Fehlerbehandlung
     if (INDEX == NULL){
@@ -45,7 +45,8 @@ char* Index_Auslesen(void)
     }
     //Speicher anfordern
     char * gespeicherte_Files = calloc(30,sizeof(char) * ((file_name_LEN+2)));
-    fscanf(INDEX,"%s");
+    printf("debug 1");
+    fscanf(INDEX,"%s",gespeicherte_Files);
     printf("Test = %s", gespeicherte_Files);
     return gespeicherte_Files;
 

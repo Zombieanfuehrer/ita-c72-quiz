@@ -41,10 +41,13 @@ bool Fragen_in_datei_speichern(Fragenfeld *Quizfragen)
     
     time_t sysTime;
     struct tm *sysTimeStruct;    
+    
+    char cValidInput[1] = {0};
 
     //Fragenkatalog ist nicht leer, aktuell erstes feld
     if (*Quizfragen->Frage){
         
+        //Default Dateiname
         //Systemzeit auslesen fuer Dateinamen-Bestimmung
         sysTime = time(NULL);
         sysTimeStruct = localtime(&sysTime);
@@ -59,16 +62,31 @@ bool Fragen_in_datei_speichern(Fragenfeld *Quizfragen)
         strncpy_s(Dateiname+strlen(Dateiname),(LEN_ASCII_TIME + strlen(text_dat)),text_dat,strlen(text_dat));       
         //Dateinamen formatieren (keine Leerzeichen, keinen Uhrzeit Stempel)
         Dateiname = Zeit_Stempel_loeschen(Dateiname);
+        
+        //Benutzer definierter Dateiname
+        printf("Der aktuelle Fragen-Katalog wird unter <%s> gespeichert, Speichernamen aendern? ([j] oder [beliebige Taste]",Dateiname);
+        scanf("%c",&cValidInput);
+        while(getchar()!='\n'){}
+        if (*cValidInput == 'j' || *cValidInput == 'J'){
+            printf("\nSpeichernamen eingeben [max. 28 Zeichen]: ");
+            //Neuen Speichernamen einlesen
+            fgets(Dateiname, 28, stdin);
+            //String formatieren
+            Dateiname[strcspn(Dateiname, "\n")] = 0;        //Terminator entfernen
+            Dateiname = replace_char(Dateiname,' ','_');    //Leerzeichen gegen Unterstriche ersetzten
+            strncpy_s(Dateiname+(strlen(Dateiname)),strlen(Dateiname),text_dat,strlen(text_dat));   //Datei-Endung anhaengen
+        }
+        
         //Datei schreiben oeffnen, wird ueberschrieben wenn diese schon existiert. if fragt ob filepointer zurueck gegeben wird      
         save_stream = fopen(Dateiname,"w+");
         if(save_stream == NULL){
             perror("Text-Datei zum speichern des aktuellen Fragen-Katalogs konnte nicht angelegt werden!\n");    
         }
         else{
-            
+            //Kopfzeile und Erstellungsdatum in Datei schreiben
+            fprintf(save_stream,"Quizfragen-Katalog vom %s",asctime(sysTimeStruct)+4);
             while (*Quizfragen->Frage)
-            {
-                fprintf(save_stream,"Quizfragen-Katalog vom %s",asctime(sysTimeStruct)+4);
+            {  
                 fprintf(save_stream,"%s\n",Quizfragen->Frage);
                 fprintf(save_stream,"%s\n",Quizfragen->Antwort);
                 ++Quizfragen;
