@@ -3,6 +3,7 @@
 
 app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.obj
  ../include/PruefungsQuiz.h
+ ../include/file_index.h
  ../include/generator.h
  ../include/menue.h
  ../include/save_fragenfeld.h

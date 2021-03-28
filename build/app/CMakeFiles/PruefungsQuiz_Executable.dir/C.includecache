@@ -8,6 +8,16 @@
 
 ../include/PruefungsQuiz.h
 
+../include/file_index.h
+stdio.h
+-
+stdbool.h
+-
+stdlib.h
+-
+string.h
+-
+
 ../include/generator.h
 stdio.h
 -
@@ -43,6 +53,8 @@ stdlib.h
 -
 PruefungsQuiz.h
 ../include/PruefungsQuiz.h
+file_index.h
+../include/file_index.h
 
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/app/main.c
 stdio.h

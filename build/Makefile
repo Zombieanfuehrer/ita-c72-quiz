@@ -142,6 +142,19 @@ Quiz_Fragen_save/fast:
 .PHONY : Quiz_Fragen_save/fast
 
 #=============================================================================
+# Target rules for targets named Saved_Data_Index
+
+# Build rule for target.
+Saved_Data_Index: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Saved_Data_Index
+.PHONY : Saved_Data_Index
+
+# fast build rule for target.
+Saved_Data_Index/fast:
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Saved_Data_Index.dir\build.make src/CMakeFiles/Saved_Data_Index.dir/build
+.PHONY : Saved_Data_Index/fast
+
+#=============================================================================
 # Target rules for targets named Hauptmenu
 
 # Build rule for target.
@@ -192,6 +205,7 @@ help:
 	@echo ... PruefungsQuiz_Executable
 	@echo ... Quiz_Fragen_Gen
 	@echo ... Quiz_Fragen_save
+	@echo ... Saved_Data_Index
 .PHONY : help
 
 

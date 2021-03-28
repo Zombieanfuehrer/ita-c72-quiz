@@ -65,7 +65,7 @@ bool Fragen_in_datei_speichern(Fragenfeld *Quizfragen)
             perror("Text-Datei zum speichern des aktuellen Fragen-Katalogs konnte nicht angelegt werden!\n");    
         }
         else{
-            printf("Fragen-Katalog in %s gespeichert.\n",Dateiname);
+            
             while (*Quizfragen->Frage)
             {
                 fprintf(save_stream,"Quizfragen-Katalog vom %s",asctime(sysTimeStruct)+4);
@@ -75,7 +75,8 @@ bool Fragen_in_datei_speichern(Fragenfeld *Quizfragen)
             }
             //Dateistream schliessen
             if(fclose(save_stream) == 0){
-                printf("ende\n");             
+                Index_Erweitern(Dateiname);
+                printf("Fragen-Katalog in %s gespeichert.\n",Dateiname);          
                 free(Dateiname);        //Speicher wieder freigeben
                 return true; 
             }else{

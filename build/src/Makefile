@@ -144,6 +144,21 @@ Quiz_Fragen_save/fast:
 .PHONY : Quiz_Fragen_save/fast
 
 # Convenience name for target.
+src/CMakeFiles/Saved_Data_Index.dir/rule:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/Saved_Data_Index.dir/rule
+.PHONY : src/CMakeFiles/Saved_Data_Index.dir/rule
+
+# Convenience name for target.
+Saved_Data_Index: src/CMakeFiles/Saved_Data_Index.dir/rule
+
+.PHONY : Saved_Data_Index
+
+# fast build rule for target.
+Saved_Data_Index/fast:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Saved_Data_Index.dir\build.make src/CMakeFiles/Saved_Data_Index.dir/build
+.PHONY : Saved_Data_Index/fast
+
+# Convenience name for target.
 src/CMakeFiles/Hauptmenu.dir/rule:
 	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/Hauptmenu.dir/rule
 .PHONY : src/CMakeFiles/Hauptmenu.dir/rule
@@ -172,6 +187,33 @@ Quiz_Fragen_Gen: src/CMakeFiles/Quiz_Fragen_Gen.dir/rule
 Quiz_Fragen_Gen/fast:
 	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_Gen.dir\build.make src/CMakeFiles/Quiz_Fragen_Gen.dir/build
 .PHONY : Quiz_Fragen_Gen/fast
+
+file_index.obj: file_index.c.obj
+
+.PHONY : file_index.obj
+
+# target to build an object file
+file_index.c.obj:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Saved_Data_Index.dir\build.make src/CMakeFiles/Saved_Data_Index.dir/file_index.c.obj
+.PHONY : file_index.c.obj
+
+file_index.i: file_index.c.i
+
+.PHONY : file_index.i
+
+# target to preprocess a source file
+file_index.c.i:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Saved_Data_Index.dir\build.make src/CMakeFiles/Saved_Data_Index.dir/file_index.c.i
+.PHONY : file_index.c.i
+
+file_index.s: file_index.c.s
+
+.PHONY : file_index.s
+
+# target to generate assembly for a file
+file_index.c.s:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Saved_Data_Index.dir\build.make src/CMakeFiles/Saved_Data_Index.dir/file_index.c.s
+.PHONY : file_index.c.s
 
 generator.obj: generator.c.obj
 
@@ -265,6 +307,10 @@ help:
 	@echo ... Hauptmenu
 	@echo ... Quiz_Fragen_Gen
 	@echo ... Quiz_Fragen_save
+	@echo ... Saved_Data_Index
+	@echo ... file_index.obj
+	@echo ... file_index.i
+	@echo ... file_index.s
 	@echo ... generator.obj
 	@echo ... generator.i
 	@echo ... generator.s

@@ -3,6 +3,7 @@ C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/CMakeFiles/rebuild_cache.
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/cmake/CMakeFiles/edit_cache.dir
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/cmake/CMakeFiles/rebuild_cache.dir
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/Quiz_Fragen_save.dir
+C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/Saved_Data_Index.dir
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/Hauptmenu.dir
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/Quiz_Fragen_Gen.dir
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/edit_cache.dir

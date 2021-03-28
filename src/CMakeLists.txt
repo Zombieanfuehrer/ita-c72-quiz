@@ -12,6 +12,15 @@ target_include_directories(${_C_MENU_LIB} PUBLIC
 
     "${PROJECT_SOURCE_DIR}/include/"
 )
+###-----Saved_Data_Index-----------------#########################
+add_library(${_C_INDEX_LIB} OBJECT
+
+    "${PROJECT_SOURCE_DIR}/src/file_index.c"
+)
+target_include_directories(${_C_INDEX_LIB} PUBLIC
+
+    "${PROJECT_SOURCE_DIR}/include/"
+)
 ###-----SAVE_FAGENKATALOG----------------#########################
 add_library(${_C_72_SAVE_FRAGENKATALOG} OBJECT
 
@@ -21,6 +30,10 @@ add_library(${_C_72_SAVE_FRAGENKATALOG} OBJECT
 target_include_directories(${_C_72_SAVE_FRAGENKATALOG} PUBLIC
 
     "${PROJECT_SOURCE_DIR}/include/"
+)
+target_link_libraries(${_C_72_SAVE_FRAGENKATALOG} PUBLIC
+
+    ${_C_INDEX_LIB}
 )
 ###-----GENERATOR----------------#################################
 add_library(${_C_72_GENERATOR} OBJECT

@@ -8,6 +8,7 @@
 #include <stdlib.h>
 
 #include "PruefungsQuiz.h"
+#include "file_index.h"
 
 #define LEN_ASCII_TIME          25       //Thu Mar 26 06:00:48 2009 = 24 + \0
 #define ASCTIME_TIME_STAMP_POS  11
