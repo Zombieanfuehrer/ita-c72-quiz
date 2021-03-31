@@ -16,7 +16,7 @@ char * Datei_auswaehlen(char * usrAuswahl)
         return NULL;
     }
     printf("\nFragen-Katalog laden\n");
-    printf("Auswahl des zu ladenenden Fragen-Katalogs uber die entsprechende Nr.\n");
+    printf("Auswahl des Fragen-Katalogs uber die entsprechende Nr.\n");
     printf("--------------------------------------------------------------------\n\n");
     //Datensatzte aus Index-Datei auslesen
     datensaetze_stream = Index_Auslesen(datensaetze_stream);
@@ -33,7 +33,7 @@ char * Datei_auswaehlen(char * usrAuswahl)
         single_datensatz = strtok(NULL,_Trennzeichen);
     }
     Anzahl--;   //Unnoetige addition aus letztem Schleifendurchlauf abziehen.
-    printf("\n--------------------------------------------------------------------\n\n Waehlen Sie:");
+    printf("\n--------------------------------------------------------------------\n\nWaehlen Sie:");
     
     //User Eingabe     
     do
@@ -41,15 +41,52 @@ char * Datei_auswaehlen(char * usrAuswahl)
         fgets(inputFragen_Katalog, 4, stdin);
         fflush(stdin);
         inputFragen_Katalog[strcspn(inputFragen_Katalog, "\n")] = 0;            //Terminator entfernen
-        printf("Wert: = %i\n", atoi(inputFragen_Katalog));
         if (atoi(inputFragen_Katalog)  <= 0 || atoi(inputFragen_Katalog) > Anzahl){
             fprintf(stderr,"Ungueltige Eingabe, bitte Waehlen Sie einen Wert > 0 und <= %d!\n", Anzahl);
         }else inputValid = true;      
     }
     while(!inputValid);
     free(datensaetze_stream);
-    printf("Auswahl: = %s\n", ausgeleseneDatensaetze[atoi(inputFragen_Katalog)].Fragen_Katalog);
     strncpy_s(usrAuswahl,file_name_LEN,ausgeleseneDatensaetze[atoi(inputFragen_Katalog)].Fragen_Katalog,file_name_LEN);
-
     return usrAuswahl;
+}
+
+int Fragen_Katalog_einlesen(const char * Dateiname, Fragenfeld *Quizfragen)
+{
+    FILE * Fragenkatalog;
+    bool FileEnd = false;
+    int Anzahl_Datensaetze = 1;
+    //Dateistream auf Save_Dat lesend oeffnen
+    Fragenkatalog = fopen(Dateiname, "r+");
+    //Fehlerbehandlung
+    if (!Fragenkatalog){
+        fprintf(stderr,"%s konnte nicht geoeffnet werden!\n",Dateiname);
+        return -1;
+    }
+    //Dateipointer auf erster Frage positionieren
+    if (fseek(Fragenkatalog,45,SEEK_SET) != 0){
+        fprintf(stderr,"%s Dateifehler!\n",Dateiname);
+        return -1;
+    }
+    //Speicherplatz fuer aus Dateistream ausgelesene Daten allocieren
+    char * Fragenkatalog_stream = calloc(stream_buffer,sizeof(char));
+    //Dateistream auslesen bis End Of File
+    while(!FileEnd){
+        //Quizfragen Struktur abloeschen
+        memset(Quizfragen->Frage,0,sizeof((char) * Quizfragen->Frage));
+        memset(Quizfragen->Antwort,0,sizeof((char) * Quizfragen->Antwort));
+        //Frage(n) einlesen
+        if(fgets(Fragenkatalog_stream,maxLEN_F_A,Fragenkatalog) != NULL){
+            strncpy_s(Quizfragen->Frage,maxLEN_F_A,Fragenkatalog_stream,maxLEN_F_A); 
+            //Antort(en) einlesen
+            if (fgets(Fragenkatalog_stream,maxLEN_F_A,Fragenkatalog) != NULL){
+                strncpy_s(Quizfragen->Antwort,maxLEN_F_A,Fragenkatalog_stream,maxLEN_F_A); 
+                //Addr. und Anzahl erhoehen
+                ++Quizfragen;
+                ++Anzahl_Datensaetze;
+            }          
+        }else FileEnd = true;     
+    }
+    free(Fragenkatalog_stream);
+    return Anzahl_Datensaetze;
 }

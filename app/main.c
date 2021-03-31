@@ -62,7 +62,9 @@ int main (int argc, char * argv[])
             if (Index_Auslesen(ptr_usrLoad) != NULL)
             {
                 ptr_usrLoad = Datei_auswaehlen(ptr_usrLoad);
-                printf("%s \n", ptr_usrLoad); 
+                if(Fragen_Katalog_einlesen(ptr_usrLoad, ptrQuizFragen) == 0){
+                    printf("Fragen-Katalog <%s> geladen!\n",ptr_usrLoad);
+                }
 
             }else{
                 fprintf(stderr,"Keine gespeicherten Fragen-Kataloge vorhanden\n");
