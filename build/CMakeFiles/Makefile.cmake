@@ -54,6 +54,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/Quiz_Fragen_save.dir/DependInfo.cmake"
   "src/CMakeFiles/Saved_Data_Index.dir/DependInfo.cmake"
   "src/CMakeFiles/Hauptmenu.dir/DependInfo.cmake"
+  "src/CMakeFiles/Quiz_Fragen_load.dir/DependInfo.cmake"
   "src/CMakeFiles/Quiz_Fragen_Gen.dir/DependInfo.cmake"
   "app/CMakeFiles/PruefungsQuiz_Executable.dir/DependInfo.cmake"
   )

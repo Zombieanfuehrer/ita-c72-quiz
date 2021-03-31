@@ -168,6 +168,19 @@ Hauptmenu/fast:
 .PHONY : Hauptmenu/fast
 
 #=============================================================================
+# Target rules for targets named Quiz_Fragen_load
+
+# Build rule for target.
+Quiz_Fragen_load: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Quiz_Fragen_load
+.PHONY : Quiz_Fragen_load
+
+# fast build rule for target.
+Quiz_Fragen_load/fast:
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_load.dir\build.make src/CMakeFiles/Quiz_Fragen_load.dir/build
+.PHONY : Quiz_Fragen_load/fast
+
+#=============================================================================
 # Target rules for targets named Quiz_Fragen_Gen
 
 # Build rule for target.
@@ -204,6 +217,7 @@ help:
 	@echo ... Hauptmenu
 	@echo ... PruefungsQuiz_Executable
 	@echo ... Quiz_Fragen_Gen
+	@echo ... Quiz_Fragen_load
 	@echo ... Quiz_Fragen_save
 	@echo ... Saved_Data_Index
 .PHONY : help

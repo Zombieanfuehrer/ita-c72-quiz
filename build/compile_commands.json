@@ -16,6 +16,11 @@
 },
 {
   "directory": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Quiz_Fragen_load.dir/includes_C.rsp -g -o CMakeFiles\\Quiz_Fragen_load.dir\\load_fragenfeld.c.obj -c C:\\Projekte\\Cpp\\dev\\techniker-pruefung-quiz-2021\\src\\load_fragenfeld.c",
+  "file": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/src/load_fragenfeld.c"
+},
+{
+  "directory": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src",
   "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Quiz_Fragen_Gen.dir/includes_C.rsp -g -o CMakeFiles\\Quiz_Fragen_Gen.dir\\generator.c.obj -c C:\\Projekte\\Cpp\\dev\\techniker-pruefung-quiz-2021\\src\\generator.c",
   "file": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/src/generator.c"
 },

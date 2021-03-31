@@ -14,6 +14,6 @@ target_link_libraries(${MAIN} PRIVATE
     ${_C_INDEX_LIB}
     ${_C_72_SAVE_FRAGENKATALOG}      
     ${_C_72_GENERATOR}   
-        
+    ${_C_72_LOAD_FRAGENKATALOG}     
 )
 #---------------------------------------------------------------------------#

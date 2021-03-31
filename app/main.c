@@ -24,6 +24,9 @@ int main (int argc, char * argv[])
     int Menue_Auswahl = -1;
     int Status = -1;
 
+    char usrLoadDat[file_name_LEN];
+    char * ptr_usrLoad = usrLoadDat;
+
     //Record fuer Fragen u. Antworten
     Fragenfeld QuizFragen[maxFragen];
     Fragenfeld *ptrQuizFragen = QuizFragen;
@@ -34,9 +37,11 @@ int main (int argc, char * argv[])
     //Hauptmenue
     do
     { 
+        
         //Hauptmenue Funktion aufrufen 
         Menue_Auswahl = MENUE(optionen);
-
+        fflush(stdin);
+        
         switch (Menue_Auswahl)
         {
         case Exit:
@@ -53,10 +58,12 @@ int main (int argc, char * argv[])
         case RandomQuestions:
             /* code */
             break;
-        case LoadQuestions:
-            if (Index_Auslesen() != NULL)
+        case LoadQuestions:           
+            if (Index_Auslesen(ptr_usrLoad) != NULL)
             {
-                printf(":: %s",Index_Auslesen());
+                ptr_usrLoad = Datei_auswaehlen(ptr_usrLoad);
+                printf("%s \n", ptr_usrLoad); 
+
             }else{
                 fprintf(stderr,"Keine gespeicherten Fragen-Kataloge vorhanden\n");
             }          

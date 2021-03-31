@@ -23,16 +23,16 @@ bool Index_Erweitern(const char * Dateiname)
         fprintf(stderr,"INDEX-Datei konnte nicht geoeffnet/angelegt werden!");
         return false;
     }
-    status = fprintf(INDEX,"%s %01X", Dateiname, GroupSeparator);
+    status = fprintf(INDEX,"%s%c", Dateiname, GroupSeparator);
     fclose(INDEX);
-    if (status == strlen(Dateiname+2))  //+2 (leerzeichen + GroupSeparator)
+    if (status == strlen(Dateiname+1))  //+GroupSeparator
     {
         return true;
     }
     return false;   
 }
 
-char* Index_Auslesen(void)
+char* Index_Auslesen(char * stream_gespeicherte_Files)
 {
     FILE * INDEX;
 
@@ -44,10 +44,9 @@ char* Index_Auslesen(void)
         return NULL;
     }
     //Speicher anfordern
-    char * gespeicherte_Files = calloc(30,sizeof(char) * ((file_name_LEN+2)));
-    printf("debug 1");
-    fscanf(INDEX,"%s",gespeicherte_Files);
-    printf("Test = %s", gespeicherte_Files);
-    return gespeicherte_Files;
+    stream_gespeicherte_Files = calloc(30,sizeof(char) * ((file_name_LEN+2)));
+    fscanf(INDEX,"%s",stream_gespeicherte_Files);
+
+    return stream_gespeicherte_Files;
 
 }

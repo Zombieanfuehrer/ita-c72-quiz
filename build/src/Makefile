@@ -174,6 +174,21 @@ Hauptmenu/fast:
 .PHONY : Hauptmenu/fast
 
 # Convenience name for target.
+src/CMakeFiles/Quiz_Fragen_load.dir/rule:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/Quiz_Fragen_load.dir/rule
+.PHONY : src/CMakeFiles/Quiz_Fragen_load.dir/rule
+
+# Convenience name for target.
+Quiz_Fragen_load: src/CMakeFiles/Quiz_Fragen_load.dir/rule
+
+.PHONY : Quiz_Fragen_load
+
+# fast build rule for target.
+Quiz_Fragen_load/fast:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_load.dir\build.make src/CMakeFiles/Quiz_Fragen_load.dir/build
+.PHONY : Quiz_Fragen_load/fast
+
+# Convenience name for target.
 src/CMakeFiles/Quiz_Fragen_Gen.dir/rule:
 	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/Quiz_Fragen_Gen.dir/rule
 .PHONY : src/CMakeFiles/Quiz_Fragen_Gen.dir/rule
@@ -242,6 +257,33 @@ generator.c.s:
 	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_Gen.dir\build.make src/CMakeFiles/Quiz_Fragen_Gen.dir/generator.c.s
 .PHONY : generator.c.s
 
+load_fragenfeld.obj: load_fragenfeld.c.obj
+
+.PHONY : load_fragenfeld.obj
+
+# target to build an object file
+load_fragenfeld.c.obj:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_load.dir\build.make src/CMakeFiles/Quiz_Fragen_load.dir/load_fragenfeld.c.obj
+.PHONY : load_fragenfeld.c.obj
+
+load_fragenfeld.i: load_fragenfeld.c.i
+
+.PHONY : load_fragenfeld.i
+
+# target to preprocess a source file
+load_fragenfeld.c.i:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_load.dir\build.make src/CMakeFiles/Quiz_Fragen_load.dir/load_fragenfeld.c.i
+.PHONY : load_fragenfeld.c.i
+
+load_fragenfeld.s: load_fragenfeld.c.s
+
+.PHONY : load_fragenfeld.s
+
+# target to generate assembly for a file
+load_fragenfeld.c.s:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_load.dir\build.make src/CMakeFiles/Quiz_Fragen_load.dir/load_fragenfeld.c.s
+.PHONY : load_fragenfeld.c.s
+
 menue.obj: menue.c.obj
 
 .PHONY : menue.obj
@@ -306,6 +348,7 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Hauptmenu
 	@echo ... Quiz_Fragen_Gen
+	@echo ... Quiz_Fragen_load
 	@echo ... Quiz_Fragen_save
 	@echo ... Saved_Data_Index
 	@echo ... file_index.obj
@@ -314,6 +357,9 @@ help:
 	@echo ... generator.obj
 	@echo ... generator.i
 	@echo ... generator.s
+	@echo ... load_fragenfeld.obj
+	@echo ... load_fragenfeld.i
+	@echo ... load_fragenfeld.s
 	@echo ... menue.obj
 	@echo ... menue.i
 	@echo ... menue.s

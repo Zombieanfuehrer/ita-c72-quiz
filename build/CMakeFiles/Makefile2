@@ -134,6 +134,7 @@ cmake/clean:
 src/all: src/CMakeFiles/Quiz_Fragen_save.dir/all
 src/all: src/CMakeFiles/Saved_Data_Index.dir/all
 src/all: src/CMakeFiles/Hauptmenu.dir/all
+src/all: src/CMakeFiles/Quiz_Fragen_load.dir/all
 src/all: src/CMakeFiles/Quiz_Fragen_Gen.dir/all
 
 .PHONY : src/all
@@ -147,6 +148,7 @@ src/preinstall:
 src/clean: src/CMakeFiles/Quiz_Fragen_save.dir/clean
 src/clean: src/CMakeFiles/Saved_Data_Index.dir/clean
 src/clean: src/CMakeFiles/Hauptmenu.dir/clean
+src/clean: src/CMakeFiles/Quiz_Fragen_load.dir/clean
 src/clean: src/CMakeFiles/Quiz_Fragen_Gen.dir/clean
 
 .PHONY : src/clean
@@ -158,7 +160,7 @@ src/clean: src/CMakeFiles/Quiz_Fragen_Gen.dir/clean
 src/CMakeFiles/Quiz_Fragen_save.dir/all: src/CMakeFiles/Saved_Data_Index.dir/all
 	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_save.dir\build.make src/CMakeFiles/Quiz_Fragen_save.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_save.dir\build.make src/CMakeFiles/Quiz_Fragen_save.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles --progress-num=5 "Built target Quiz_Fragen_save"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles --progress-num=6 "Built target Quiz_Fragen_save"
 .PHONY : src/CMakeFiles/Quiz_Fragen_save.dir/all
 
 # Build rule for subdir invocation for target.
@@ -185,7 +187,7 @@ src/CMakeFiles/Quiz_Fragen_save.dir/clean:
 src/CMakeFiles/Saved_Data_Index.dir/all:
 	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Saved_Data_Index.dir\build.make src/CMakeFiles/Saved_Data_Index.dir/depend
 	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Saved_Data_Index.dir\build.make src/CMakeFiles/Saved_Data_Index.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles --progress-num=6 "Built target Saved_Data_Index"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles --progress-num=7 "Built target Saved_Data_Index"
 .PHONY : src/CMakeFiles/Saved_Data_Index.dir/all
 
 # Build rule for subdir invocation for target.
@@ -233,6 +235,33 @@ src/CMakeFiles/Hauptmenu.dir/clean:
 .PHONY : src/CMakeFiles/Hauptmenu.dir/clean
 
 #=============================================================================
+# Target rules for target src/CMakeFiles/Quiz_Fragen_load.dir
+
+# All Build rule for target.
+src/CMakeFiles/Quiz_Fragen_load.dir/all: src/CMakeFiles/Saved_Data_Index.dir/all
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_load.dir\build.make src/CMakeFiles/Quiz_Fragen_load.dir/depend
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_load.dir\build.make src/CMakeFiles/Quiz_Fragen_load.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles --progress-num=5 "Built target Quiz_Fragen_load"
+.PHONY : src/CMakeFiles/Quiz_Fragen_load.dir/all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/Quiz_Fragen_load.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/Quiz_Fragen_load.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles 0
+.PHONY : src/CMakeFiles/Quiz_Fragen_load.dir/rule
+
+# Convenience name for target.
+Quiz_Fragen_load: src/CMakeFiles/Quiz_Fragen_load.dir/rule
+
+.PHONY : Quiz_Fragen_load
+
+# clean rule for target.
+src/CMakeFiles/Quiz_Fragen_load.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_load.dir\build.make src/CMakeFiles/Quiz_Fragen_load.dir/clean
+.PHONY : src/CMakeFiles/Quiz_Fragen_load.dir/clean
+
+#=============================================================================
 # Target rules for target src/CMakeFiles/Quiz_Fragen_Gen.dir
 
 # All Build rule for target.
@@ -267,6 +296,7 @@ src/CMakeFiles/Quiz_Fragen_Gen.dir/clean:
 app/CMakeFiles/PruefungsQuiz_Executable.dir/all: src/CMakeFiles/Quiz_Fragen_save.dir/all
 app/CMakeFiles/PruefungsQuiz_Executable.dir/all: src/CMakeFiles/Saved_Data_Index.dir/all
 app/CMakeFiles/PruefungsQuiz_Executable.dir/all: src/CMakeFiles/Hauptmenu.dir/all
+app/CMakeFiles/PruefungsQuiz_Executable.dir/all: src/CMakeFiles/Quiz_Fragen_load.dir/all
 app/CMakeFiles/PruefungsQuiz_Executable.dir/all: src/CMakeFiles/Quiz_Fragen_Gen.dir/all
 	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\PruefungsQuiz_Executable.dir\build.make app/CMakeFiles/PruefungsQuiz_Executable.dir/depend
 	$(MAKE) $(MAKESILENT) -f app\CMakeFiles\PruefungsQuiz_Executable.dir\build.make app/CMakeFiles/PruefungsQuiz_Executable.dir/build
@@ -275,7 +305,7 @@ app/CMakeFiles/PruefungsQuiz_Executable.dir/all: src/CMakeFiles/Quiz_Fragen_Gen.
 
 # Build rule for subdir invocation for target.
 app/CMakeFiles/PruefungsQuiz_Executable.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 app/CMakeFiles/PruefungsQuiz_Executable.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles 0
 .PHONY : app/CMakeFiles/PruefungsQuiz_Executable.dir/rule

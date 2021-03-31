@@ -23,7 +23,9 @@ int MENUE (char **Unterpunkte)
     nAuswahl = atoi(&(*sAuswahl));   
     if (nAuswahl >= 0 && nAuswahl <= nAnzahl)
     {
+        fflush(stdin);
         return (nAuswahl);
     }
+    fflush(stdin);
     return -1;    
 }

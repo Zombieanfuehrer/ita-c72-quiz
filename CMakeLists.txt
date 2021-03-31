@@ -11,6 +11,7 @@ set(_C_MENU_LIB "Hauptmenu")
 set(_C_72_GENERATOR "Quiz_Fragen_Gen")
 set(_C_72_SAVE_FRAGENKATALOG "Quiz_Fragen_save")
 set(_C_INDEX_LIB "Saved_Data_Index")
+set(_C_72_LOAD_FRAGENKATALOG "Quiz_Fragen_load")
 
 #Unterverzeichnisse einbinden 
 add_subdirectory("${PROJECT_SOURCE_DIR}/cmake/")
