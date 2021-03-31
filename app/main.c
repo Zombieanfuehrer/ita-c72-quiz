@@ -1,13 +1,21 @@
-
 #include <stdio.h>
 
+//Projekt Header mit diversen definitionen
 #include "../include/PruefungsQuiz.h"
 
+//Projekt Bibliotheken
 #include <menue.h>
 #include <generator.h>
 #include <file_index.h>
+#include <load_fragenfeld.h>
 
-
+/**
+ * @brief Pruefungsquiz application
+ * 
+ * @param argc 
+ * @param argv 
+ * @return int = 0 Pruefungsquiz vom User beendet
+ */
 int main (int argc, char * argv[])
 {
     //Variablen fuer Menue-Auswahl
@@ -24,20 +32,20 @@ int main (int argc, char * argv[])
     int Menue_Auswahl = -1;
     int Status = -1;
 
-    char usrLoadDat[file_name_LEN];
-    char * ptr_usrLoad = usrLoadDat;
-
     //Record fuer Fragen u. Antworten
     Fragenfeld QuizFragen[maxFragen];
     Fragenfeld *ptrQuizFragen = QuizFragen;
-
     //Record initialisieren
     memset(ptrQuizFragen,0,sizeof(QuizFragen));
 
+    //Variablen fuer d. Laden eines Fragen-Katalogs
+    char usrLoadDat[file_name_LEN];
+    char * ptr_usrLoad = usrLoadDat;
+    unsigned int Anzahl_Fragen = 0;
+
     //Hauptmenue
     do
-    { 
-        
+    {    
         //Hauptmenue Funktion aufrufen 
         Menue_Auswahl = MENUE(optionen);
         fflush(stdin);
@@ -59,13 +67,13 @@ int main (int argc, char * argv[])
             /* code */
             break;
         case LoadQuestions:           
-            if (Index_Auslesen(ptr_usrLoad) != NULL)
-            {
-                ptr_usrLoad = Datei_auswaehlen(ptr_usrLoad);
-                if(Fragen_Katalog_einlesen(ptr_usrLoad, ptrQuizFragen) == 0){
-                    printf("Fragen-Katalog <%s> geladen!\n",ptr_usrLoad);
-                }
-
+            //Abfrage ob gespeicherte Fragen-Kataloge exestieren
+            if (Index_Auslesen(ptr_usrLoad) != NULL){
+                if (Fragen_Katalog_einlesen(Datei_auswaehlen(ptr_usrLoad),ptrQuizFragen) != error){
+                    printf("Fragen-Katalog <%s> wurde geladen!\n\n",ptr_usrLoad);
+                }else{
+                    printf("<%s> konnte nicht geladen werden!\n\n",ptr_usrLoad);
+                }                       
             }else{
                 fprintf(stderr,"Keine gespeicherten Fragen-Kataloge vorhanden\n");
             }          

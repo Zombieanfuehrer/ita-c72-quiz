@@ -32,6 +32,20 @@ PruefungsQuiz.h
 save_fragenfeld.h
 ../include/save_fragenfeld.h
 
+../include/load_fragenfeld.h
+stdio.h
+-
+stdbool.h
+-
+string.h
+-
+stdlib.h
+-
+PruefungsQuiz.h
+../include/PruefungsQuiz.h
+file_index.h
+../include/file_index.h
+
 ../include/menue.h
 stdio.h
 -
@@ -66,6 +80,8 @@ menue.h
 generator.h
 -
 file_index.h
+-
+load_fragenfeld.h
 -
 
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/include/PruefungsQuiz.h

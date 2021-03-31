@@ -3,7 +3,7 @@
 
 #define maxFragen       200
 #define maxLEN_F_A      81
-
+#define error           -1
 
 typedef struct  
 {

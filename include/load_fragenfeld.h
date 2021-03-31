@@ -11,7 +11,9 @@
 #define MAX_DATEN       255 
 #define stream_buffer   255
 
-static const char NIO_SPEICHER[] = "failed to allocate memory!\n";
+#ifndef _SAVE_FRAGENFELD_H_
+    static const char NIO_SPEICHER[] = "failed to allocate memory!\n";
+#endif //_SAVE_FRAGENFELD_H_
 
 struct load_fragenfeld
 {
@@ -20,7 +22,6 @@ struct load_fragenfeld
 };
 
 char * Datei_auswaehlen(char * usrAuswahl);
-
 int Fragen_Katalog_einlesen(const char * Dateiname, Fragenfeld *Quizfragen);
 
 #endif //_LOAD_FRAGENFELD_H_

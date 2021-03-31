@@ -15,7 +15,10 @@
 #define ASCTIME_TIME_STAMP_LEN  9
 #define ZEILENUMBRUCH           1
 
-static const char NIO_SPEICHER[] = "failed to allocate memory!\n";
+#ifndef _LOAD_FRAGENFELD_H_
+    static const char NIO_SPEICHER[] = "failed to allocate memory!\n";
+#endif //_LOAD_FRAGENFELD_H_
+
 static const char text_dat[] = ".txt";
 
 char* replace_char(char* str, char find, char replace);
