@@ -174,6 +174,21 @@ Hauptmenu/fast:
 .PHONY : Hauptmenu/fast
 
 # Convenience name for target.
+src/CMakeFiles/Quiz_staten.dir/rule:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/Quiz_staten.dir/rule
+.PHONY : src/CMakeFiles/Quiz_staten.dir/rule
+
+# Convenience name for target.
+Quiz_staten: src/CMakeFiles/Quiz_staten.dir/rule
+
+.PHONY : Quiz_staten
+
+# fast build rule for target.
+Quiz_staten/fast:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_staten.dir\build.make src/CMakeFiles/Quiz_staten.dir/build
+.PHONY : Quiz_staten/fast
+
+# Convenience name for target.
 src/CMakeFiles/Quiz_Fragen_load.dir/rule:
 	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 src/CMakeFiles/Quiz_Fragen_load.dir/rule
 .PHONY : src/CMakeFiles/Quiz_Fragen_load.dir/rule
@@ -338,6 +353,33 @@ save_fragenfeld.c.s:
 	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_Fragen_save.dir\build.make src/CMakeFiles/Quiz_Fragen_save.dir/save_fragenfeld.c.s
 .PHONY : save_fragenfeld.c.s
 
+start_quiz.obj: start_quiz.c.obj
+
+.PHONY : start_quiz.obj
+
+# target to build an object file
+start_quiz.c.obj:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_staten.dir\build.make src/CMakeFiles/Quiz_staten.dir/start_quiz.c.obj
+.PHONY : start_quiz.c.obj
+
+start_quiz.i: start_quiz.c.i
+
+.PHONY : start_quiz.i
+
+# target to preprocess a source file
+start_quiz.c.i:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_staten.dir\build.make src/CMakeFiles/Quiz_staten.dir/start_quiz.c.i
+.PHONY : start_quiz.c.i
+
+start_quiz.s: start_quiz.c.s
+
+.PHONY : start_quiz.s
+
+# target to generate assembly for a file
+start_quiz.c.s:
+	cd /d C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build && $(MAKE) $(MAKESILENT) -f src\CMakeFiles\Quiz_staten.dir\build.make src/CMakeFiles/Quiz_staten.dir/start_quiz.c.s
+.PHONY : start_quiz.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -350,6 +392,7 @@ help:
 	@echo ... Quiz_Fragen_Gen
 	@echo ... Quiz_Fragen_load
 	@echo ... Quiz_Fragen_save
+	@echo ... Quiz_staten
 	@echo ... Saved_Data_Index
 	@echo ... file_index.obj
 	@echo ... file_index.i
@@ -366,6 +409,9 @@ help:
 	@echo ... save_fragenfeld.obj
 	@echo ... save_fragenfeld.i
 	@echo ... save_fragenfeld.s
+	@echo ... start_quiz.obj
+	@echo ... start_quiz.i
+	@echo ... start_quiz.s
 .PHONY : help
 
 

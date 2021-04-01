@@ -8,12 +8,13 @@
 #include <generator.h>
 #include <file_index.h>
 #include <load_fragenfeld.h>
+#include <start_quiz.h>
 
 /**
  * @brief Pruefungsquiz application
  * 
- * @param argc 
- * @param argv 
+ * @param argc ohne Funktion
+ * @param argv ohne Funktion
  * @return int = 0 Pruefungsquiz vom User beendet
  */
 int main (int argc, char * argv[])
@@ -41,30 +42,40 @@ int main (int argc, char * argv[])
     //Variablen fuer d. Laden eines Fragen-Katalogs
     char usrLoadDat[file_name_LEN];
     char * ptr_usrLoad = usrLoadDat;
-    unsigned int Anzahl_Fragen = 0;
+
+    //Ergebniss / Quiz-Starten 
+    float Prozent = 0.0;
 
     //Hauptmenue
     do
     {    
         //Hauptmenue Funktion aufrufen 
         Menue_Auswahl = MENUE(optionen);
-        fflush(stdin);
+        printf("\n");
+        fflush(stdin);                                  //stdin buffer leeren
         
         switch (Menue_Auswahl)
         {
         case Exit:
-            /* code */
+            printf("BYE BYE!\n");
             break;
         case StartQuiz:
             //Fragen vorhanden?
             if (*ptrQuizFragen->Frage){
-                
+                Prozent = start(ptrQuizFragen);   
+                printf("Sie haben %f der Fragen korrekt beantwortet!\n",Prozent); 
             }else{
                 fprintf(stderr,"Noch keine Quiz-Fragen vorhanden!\nFragen laden oder ueber Generator erstellen.\n");
             }
             break;
         case RandomQuestions:
-            /* code */
+            //Fragen vorhanden?
+            if (*ptrQuizFragen->Frage){
+                Prozent = start(mixQuestions(ptrQuizFragen));  
+                printf("Sie haben %f der Fragen korrekt beantwortet!\n",Prozent); 
+            }else{
+                fprintf(stderr,"Noch keine Quiz-Fragen vorhanden!\nFragen laden oder ueber Generator erstellen.\n");
+            }
             break;
         case LoadQuestions:           
             //Abfrage ob gespeicherte Fragen-Kataloge exestieren

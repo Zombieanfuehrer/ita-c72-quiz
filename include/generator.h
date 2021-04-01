@@ -6,9 +6,9 @@
 #include <string.h>
 #include <stdbool.h>
 
-#include "PruefungsQuiz.h"
-#include "save_fragenfeld.h"
+#include "../include/PruefungsQuiz.h"
+#include "../include/save_fragenfeld.h"
 
 int Fragen_einlesen(Fragenfeld *Quizfragen);
 
-#endif //
+#endif // _GENERATOR_H_

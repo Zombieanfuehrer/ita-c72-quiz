@@ -99,7 +99,8 @@ PruefungsQuiz_Executable_EXTERNAL_OBJECTS = \
 "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/Saved_Data_Index.dir/file_index.c.obj" \
 "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/Quiz_Fragen_save.dir/save_fragenfeld.c.obj" \
 "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/Quiz_Fragen_Gen.dir/generator.c.obj" \
-"C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/Quiz_Fragen_load.dir/load_fragenfeld.c.obj"
+"C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/Quiz_Fragen_load.dir/load_fragenfeld.c.obj" \
+"C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/CMakeFiles/Quiz_staten.dir/start_quiz.c.obj"
 
 app/PruefungsQuiz_Executable.exe: app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.obj
 app/PruefungsQuiz_Executable.exe: src/CMakeFiles/Hauptmenu.dir/menue.c.obj
@@ -107,6 +108,7 @@ app/PruefungsQuiz_Executable.exe: src/CMakeFiles/Saved_Data_Index.dir/file_index
 app/PruefungsQuiz_Executable.exe: src/CMakeFiles/Quiz_Fragen_save.dir/save_fragenfeld.c.obj
 app/PruefungsQuiz_Executable.exe: src/CMakeFiles/Quiz_Fragen_Gen.dir/generator.c.obj
 app/PruefungsQuiz_Executable.exe: src/CMakeFiles/Quiz_Fragen_load.dir/load_fragenfeld.c.obj
+app/PruefungsQuiz_Executable.exe: src/CMakeFiles/Quiz_staten.dir/start_quiz.c.obj
 app/PruefungsQuiz_Executable.exe: app/CMakeFiles/PruefungsQuiz_Executable.dir/build.make
 app/PruefungsQuiz_Executable.exe: app/CMakeFiles/PruefungsQuiz_Executable.dir/linklibs.rsp
 app/PruefungsQuiz_Executable.exe: app/CMakeFiles/PruefungsQuiz_Executable.dir/objects1.rsp

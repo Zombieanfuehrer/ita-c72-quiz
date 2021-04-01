@@ -27,9 +27,9 @@ string.h
 -
 stdbool.h
 -
-PruefungsQuiz.h
 ../include/PruefungsQuiz.h
-save_fragenfeld.h
+../include/PruefungsQuiz.h
+../include/save_fragenfeld.h
 ../include/save_fragenfeld.h
 
 ../include/load_fragenfeld.h
@@ -70,6 +70,22 @@ PruefungsQuiz.h
 file_index.h
 ../include/file_index.h
 
+../include/start_quiz.h
+stdio.h
+-
+string.h
+-
+stdbool.h
+-
+math.h
+-
+stdlib.h
+-
+time.h
+-
+../include/PruefungsQuiz.h
+../include/PruefungsQuiz.h
+
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/app/main.c
 stdio.h
 -
@@ -82,6 +98,8 @@ generator.h
 file_index.h
 -
 load_fragenfeld.h
+-
+start_quiz.h
 -
 
 C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/include/PruefungsQuiz.h

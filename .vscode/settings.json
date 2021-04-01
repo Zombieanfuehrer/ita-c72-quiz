@@ -2,6 +2,8 @@
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
     "files.associations": {
         "menue.h": "c",
-        "generator.h": "c"
+        "generator.h": "c",
+        "pruefungsquiz.h": "c",
+        "cmath": "c"
     }
 }

@@ -14,6 +14,17 @@ target_include_directories(${_C_MENU_LIB} PUBLIC
 )
 #---------------------------------------------------------------------------#
 
+###-----Quiz_staten-----------------#########################################
+add_library(${_C_72_START_QUIZ} OBJECT
+
+    "${PROJECT_SOURCE_DIR}/src/start_quiz.c"
+)
+target_include_directories(${_C_72_START_QUIZ} PUBLIC
+
+    "${PROJECT_SOURCE_DIR}/include/"
+)
+#---------------------------------------------------------------------------#
+
 ###-----Saved_Data_Index-----------------####################################
 add_library(${_C_INDEX_LIB} OBJECT
 

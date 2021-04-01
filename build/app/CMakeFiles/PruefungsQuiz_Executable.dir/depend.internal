@@ -8,5 +8,6 @@ app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.obj
  ../include/load_fragenfeld.h
  ../include/menue.h
  ../include/save_fragenfeld.h
+ ../include/start_quiz.h
  C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/app/main.c
  C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/include/PruefungsQuiz.h

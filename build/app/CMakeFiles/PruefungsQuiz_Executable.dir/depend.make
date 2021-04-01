@@ -7,6 +7,7 @@ app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.obj: ../include/generator.h
 app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.obj: ../include/load_fragenfeld.h
 app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.obj: ../include/menue.h
 app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.obj: ../include/save_fragenfeld.h
+app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.obj: ../include/start_quiz.h
 app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.obj: ../app/main.c
 app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.obj: ../include/PruefungsQuiz.h
 

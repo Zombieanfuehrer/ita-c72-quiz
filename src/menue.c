@@ -6,7 +6,7 @@ int MENUE (char **Unterpunkte)
     int  nAuswahl;
     int  nAnzahl = 0;
 
-    puts("Bitte waehlen Sie:");
+    puts("\nBitte waehlen Sie:");
     while (*Unterpunkte != NULL)
     {
         printf("%i: ",nAnzahl);
