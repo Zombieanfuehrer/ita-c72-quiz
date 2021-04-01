@@ -1,0 +1,25 @@
+Quizfragen-Katalog vom Apr 01 08:34:19 2021
+In welcher C-Bibliothek befindet sich die strcmp() Funktion?
+string.h
+wie lautet die Deklaration eines I/O Streams in C?
+FILE *
+Was macht dieser "<<" Operator in C??
+schieben links
+"while(getchar() != '\n')" wartet auf? 
+ENTER
+was gibt der Platzhalter %d bei einer printf Funktion aus?
+Positive Ganzahl
+wie viele Nachkommastellen gibt dieser "%.2f" Platzhalter bei printf aus?
+2
+welche time.h Funktion wandelt d. zeitstruktur tm in einem asciistring? 
+asctime()
+in welcher Bibliothek findet sich die "memcpy()" Funktion?
+string.h
+Welcher ist der Adress-Operator in c?
+&
+mit welcher Funktion kann man strings kopieren?
+strcpy
+Welches Zeichen zeichnet ein Stringende aus?
+Terminator
+ein unsigned char besteht aus wie vielen Byte?
+1
