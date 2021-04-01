@@ -83,14 +83,18 @@ stdlib.h
 -
 time.h
 -
+windows.h
+-
+unistd. h.
+-
 ../include/PruefungsQuiz.h
 ../include/PruefungsQuiz.h
 
-C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/app/main.c
+C:/Dev/C/quiz/app/main.c
 stdio.h
 -
 ../include/PruefungsQuiz.h
-C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/include/PruefungsQuiz.h
+C:/Dev/C/quiz/include/PruefungsQuiz.h
 menue.h
 -
 generator.h
@@ -102,5 +106,5 @@ load_fragenfeld.h
 start_quiz.h
 -
 
-C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/include/PruefungsQuiz.h
+C:/Dev/C/quiz/include/PruefungsQuiz.h
 

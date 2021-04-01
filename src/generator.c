@@ -83,7 +83,7 @@ int Fragen_einlesen(Fragenfeld *Quizfragen)
         //Auf naechstem Struktur-Element positionieren
         ++Quizfragen;
         bInputValid = false;
-        //Adresse mit einem nullptr besetzten. Falls vom user abgebrochen wird ist das Ende des Arrays bekannt.
+        //Adresse mit 0 besetzten, um Ende des Arrays zu kennzeichenen.
         Quizfragen->Frage[0] = 0;
         Quizfragen->Antwort[0] = 0;
         

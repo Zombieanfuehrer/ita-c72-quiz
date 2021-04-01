@@ -1,4 +1,4 @@
-# Install script for directory: C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021
+# Install script for directory: C:/Dev/C/quiz
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,14 +34,14 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Qt/Tools/mingw810_64/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/cygwin64/bin/x86_64-w64-mingw32-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/cmake/cmake_install.cmake")
-  include("C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src/cmake_install.cmake")
-  include("C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/app/cmake_install.cmake")
+  include("C:/Dev/C/quiz/build/cmake/cmake_install.cmake")
+  include("C:/Dev/C/quiz/build/src/cmake_install.cmake")
+  include("C:/Dev/C/quiz/build/app/cmake_install.cmake")
 
 endif()
 
@@ -53,5 +53,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Dev/C/quiz/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

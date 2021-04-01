@@ -52,11 +52,18 @@ float start(Fragenfeld *Quizfragen)
 Fragenfeld * mixQuestions(Fragenfeld *origin_Quizfragen)
 {
     //srand initialieren
-    time_t srandSeed;
-    srand((unsigned)time(&srandSeed));
+    srand(time(NULL));
+    //System-Pause um srand() abzuwarten
+    if(Windows){
+        Sleep(1200);
+    }
+    else if(Linux){
+        sleep(1.2);
+    }
 
-    unsigned int anzahlFragen = 0;
-    bool RND_VALID = false;
+    //Variablen fuer Zuweisung zufaelliger Fragen
+    unsigned int anzahlFragen = 0, rnd;
+    bool firstRND = true;
 
     //Anzahl an Fragen ermitteln
     while (*origin_Quizfragen->Frage && anzahlFragen <= maxFragen){
@@ -65,6 +72,7 @@ Fragenfeld * mixQuestions(Fragenfeld *origin_Quizfragen)
     }
     //Adresse wieder auf Urspung setzten
     origin_Quizfragen = origin_Quizfragen -anzahlFragen;
+    anzahlFragen +offset;
 
     //Record fuer gemischten Fragen-Katalog anlegen
     Fragenfeld rndQuizFragen[anzahlFragen];
@@ -72,34 +80,61 @@ Fragenfeld * mixQuestions(Fragenfeld *origin_Quizfragen)
 
     //Array fuer Zahlen die schon ueber srand erzeugt wurden auszuschliessen
     int gesperrteZahlen[anzahlFragen]; 
-    memset(gesperrteZahlen,0,sizeof(int) * anzahlFragen);       //Array mit 0 initialiseren
-
+    int * ptr_gesperrteZahlen = gesperrteZahlen; 
+    for (int init = 0; init < anzahlFragen; init++)     //Array mit 0 initialiseren
+    {
+        gesperrteZahlen[init] = 0;
+    }
+   
     //Mischen
     for (unsigned int origin = 0; origin < anzahlFragen; origin++)
     {
-        //Zufallszahl nach Anzahl der Fragen erzeugen und pruefen
-        unsigned int rnd = origin + (rand()/(RAND_MAX/(anzahlFragen-origin) +1));       
-        RND_VALID = rndValid(rnd,gesperrteZahlen); 
-        while(!RND_VALID)
-        {
-            unsigned int rnd = origin + (rand()/(RAND_MAX/(anzahlFragen-origin) +1)); 
-            printf("geno = %d\n", rnd);
-            RND_VALID = rndValid(rnd,gesperrteZahlen); 
+        if (firstRND){          //Im ersten durchlauf des mischens muss nicht abgeprueft werden ob eine Zahl schon exestiert
+            rnd = (unsigned int)(offset+ anzahlFragen * rand() /RAND_MAX);   
+            firstRND = false;
+        }else{
+            //Zufallszahl auf Einzigartigkeit pruefen 
+            while(!rndValid(rnd,ptr_gesperrteZahlen))
+            {
+                rnd = (unsigned int)(offset+ anzahlFragen * rand() /RAND_MAX);  
+            }
         }
         gesperrteZahlen[origin] = rnd;
-      
-        //RandomQuizFragen Adresse nach Zufallszahl zuordnen
-        //ptr_rndQuizFragen = ptr_rndQuizFragen + rnd;
+        printf("Lauf %d | Gueltige Zufallszahl = %d\n",origin,gesperrteZahlen[origin]);
+        while(getchar() != '\n');
+        for (size_t i = 0; i < anzahlFragen; i++)
+        {
+            printf("nr:%d [%d]\n",i,gesperrteZahlen[i]);
+        }
+        while(getchar() != '\n');
+        //Random-Quiz-Fragen Adresse nach Zufallszahl zuordnen   
+        origin_Quizfragen = origin_Quizfragen + (rnd-offset);            //ptr auf zufaellige fragen setzten
+        //Frage+Antwort in "neue" Zufalls-Struktur koopieren
         memcpy_s(ptr_rndQuizFragen,sizeof(Fragenfeld),origin_Quizfragen,(1 * sizeof(Fragenfeld)));  // soll = ptr_rndQuizFragen[rnd] = origin_Quizfragen[origin];
-        //ptr_rndQuizFragen = ptr_rndQuizFragen - rnd;
+        //Reset zur Urspruenglichen Adresse
+        origin_Quizfragen = origin_Quizfragen - (rnd-offset); 
+        //"neue" Zufalls-Struktur auf's naechste Feld positionieren
         ++ptr_rndQuizFragen;
-        ++origin_Quizfragen;
-        //reset
-        RND_VALID = false;
     }
+    printf("ENDE %i \n",anzahlFragen);
     //Addr. wieder auf den beginn setzten
     ptr_rndQuizFragen = ptr_rndQuizFragen -anzahlFragen;
+    //Adresse mit 0 besetzten, um Ende des Arrays zu kennzeichenen.
+    ptr_rndQuizFragen->Frage[anzahlFragen] = 0;
+    ptr_rndQuizFragen->Antwort[anzahlFragen] = 0;
 
+    anzahlFragen = 0;
+    while(*ptr_rndQuizFragen->Frage)
+    {
+        anzahlFragen++;
+        printf("NR.: %d\n",anzahlFragen);
+        printf("%s\n",ptr_rndQuizFragen->Frage);
+        printf("%s\n",ptr_rndQuizFragen->Antwort);
+        while(getchar() != '\n');
+        ++ptr_rndQuizFragen;
+    }
+
+    printf("wENDE %i \n",anzahlFragen);
     //Zeiger auf den "gemischten" Fragen-Katalog zurueckgeben
     return ptr_rndQuizFragen;
 }
