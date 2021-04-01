@@ -36,6 +36,9 @@ int main (int argc, char * argv[])
     //Record fuer Fragen u. Antworten
     Fragenfeld QuizFragen[maxFragen];
     Fragenfeld *ptrQuizFragen = QuizFragen;
+    //Record fuer Fragen-Katalog mix
+    Fragenfeld rndQuizFragen[maxFragen];
+    Fragenfeld *ptr_rndQuizFragen = rndQuizFragen;
     //Record initialisieren
     memset(ptrQuizFragen,0,sizeof(QuizFragen));
 
@@ -71,7 +74,9 @@ int main (int argc, char * argv[])
         case RandomQuestions:
             //Fragen vorhanden?
             if (*ptrQuizFragen->Frage){
-                Prozent = start(mixQuestions(ptrQuizFragen));  
+                ptr_rndQuizFragen = mixQuestions(ptrQuizFragen);
+                printf("ENDE!");
+                Prozent = start(ptr_rndQuizFragen);  
                 printf("Sie haben %f der Fragen korrekt beantwortet!\n",Prozent); 
             }else{
                 fprintf(stderr,"Noch keine Quiz-Fragen vorhanden!\nFragen laden oder ueber Generator erstellen.\n");

@@ -5,7 +5,6 @@ bool rndValid(int gewuenschteZahl ,int genutzeZufallszahlen[])
     bool cmp = true;
     while (*genutzeZufallszahlen)
     {
-        printf("rnd =%d, savedrnd= %d\n",gewuenschteZahl,*genutzeZufallszahlen);
         if (gewuenschteZahl == *genutzeZufallszahlen){
             cmp = false;
         }
@@ -54,11 +53,12 @@ Fragenfeld * mixQuestions(Fragenfeld *origin_Quizfragen)
     //srand initialieren
     srand(time(NULL));
     //System-Pause um srand() abzuwarten
+    printf("Warte srand() init ab\n");
     if(Windows){
-        Sleep(1200);
+        Sleep(2000);
     }
     else if(Linux){
-        sleep(1.2);
+        sleep(2.0);
     }
 
     //Variablen fuer Zuweisung zufaelliger Fragen
@@ -99,30 +99,18 @@ Fragenfeld * mixQuestions(Fragenfeld *origin_Quizfragen)
                 rnd = (unsigned int)(offset+ anzahlFragen * rand() /RAND_MAX);  
             }
         }
-        gesperrteZahlen[origin] = rnd;
-        printf("Lauf %d | Gueltige Zufallszahl = %d\n",origin,gesperrteZahlen[origin]);
-        while(getchar() != '\n');
-        for (size_t i = 0; i < anzahlFragen; i++)
-        {
-            printf("nr:%d [%d]\n",i,gesperrteZahlen[i]);
-        }
-        while(getchar() != '\n');
+        gesperrteZahlen[origin] = rnd;  //Gueltige Zufallszahl in Sperrliste zuweisen
         //Random-Quiz-Fragen Adresse nach Zufallszahl zuordnen   
-        origin_Quizfragen = origin_Quizfragen + (rnd-offset);            //ptr auf zufaellige fragen setzten
-        //Frage+Antwort in "neue" Zufalls-Struktur koopieren
-        memcpy_s(ptr_rndQuizFragen,sizeof(Fragenfeld),origin_Quizfragen,(1 * sizeof(Fragenfeld)));  // soll = ptr_rndQuizFragen[rnd] = origin_Quizfragen[origin];
-        //Reset zur Urspruenglichen Adresse
-        origin_Quizfragen = origin_Quizfragen - (rnd-offset); 
-        //"neue" Zufalls-Struktur auf's naechste Feld positionieren
-        ++ptr_rndQuizFragen;
+        memcpy_s(ptr_rndQuizFragen,(1* sizeof(Fragenfeld)),(origin_Quizfragen+(rnd-offset)),(1 * sizeof(Fragenfeld)));      //Frage+Antwort in "neue" Zufalls-Struktur koopieren
+        ++ptr_rndQuizFragen;    //"neue" Zufalls-Struktur auf's naechste Feld positionieren
     }
-    printf("ENDE %i \n",anzahlFragen);
     //Addr. wieder auf den beginn setzten
     ptr_rndQuizFragen = ptr_rndQuizFragen -anzahlFragen;
     //Adresse mit 0 besetzten, um Ende des Arrays zu kennzeichenen.
     ptr_rndQuizFragen->Frage[anzahlFragen] = 0;
     ptr_rndQuizFragen->Antwort[anzahlFragen] = 0;
 
+    /*
     anzahlFragen = 0;
     while(*ptr_rndQuizFragen->Frage)
     {
@@ -130,11 +118,11 @@ Fragenfeld * mixQuestions(Fragenfeld *origin_Quizfragen)
         printf("NR.: %d\n",anzahlFragen);
         printf("%s\n",ptr_rndQuizFragen->Frage);
         printf("%s\n",ptr_rndQuizFragen->Antwort);
-        while(getchar() != '\n');
         ++ptr_rndQuizFragen;
     }
-
     printf("wENDE %i \n",anzahlFragen);
+    while(getchar() != '\n');
+    */
     //Zeiger auf den "gemischten" Fragen-Katalog zurueckgeben
     return ptr_rndQuizFragen;
 }
