@@ -1,3 +1,3 @@
 "C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\PruefungsQuiz_Executable.dir/objects.a
 C:\Qt\Tools\mingw810_64\bin\ar.exe cr CMakeFiles\PruefungsQuiz_Executable.dir/objects.a @CMakeFiles\PruefungsQuiz_Executable.dir\objects1.rsp
-C:\Qt\Tools\mingw810_64\bin\x86_64-w64-mingw32-gcc.exe -g -Wl,--whole-archive CMakeFiles\PruefungsQuiz_Executable.dir/objects.a -Wl,--no-whole-archive -o PruefungsQuiz_Executable.exe -Wl,--out-implib,libPruefungsQuiz_Executable.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\PruefungsQuiz_Executable.dir\linklibs.rsp
+C:\Qt\Tools\mingw810_64\bin\x86_64-w64-mingw32-gcc.exe -O3 -DNDEBUG -Wl,--whole-archive CMakeFiles\PruefungsQuiz_Executable.dir/objects.a -Wl,--no-whole-archive -o PruefungsQuiz_Executable.exe -Wl,--out-implib,libPruefungsQuiz_Executable.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\PruefungsQuiz_Executable.dir\linklibs.rsp

@@ -129,6 +129,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named PruefungsQuiz_Doc
+
+# Build rule for target.
+PruefungsQuiz_Doc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 PruefungsQuiz_Doc
+.PHONY : PruefungsQuiz_Doc
+
+# fast build rule for target.
+PruefungsQuiz_Doc/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PruefungsQuiz_Doc.dir\build.make CMakeFiles/PruefungsQuiz_Doc.dir/build
+.PHONY : PruefungsQuiz_Doc/fast
+
+#=============================================================================
 # Target rules for targets named Quiz_Fragen_save
 
 # Build rule for target.
@@ -227,6 +240,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... PruefungsQuiz_Doc
 	@echo ... Hauptmenu
 	@echo ... PruefungsQuiz_Executable
 	@echo ... Quiz_Fragen_Gen

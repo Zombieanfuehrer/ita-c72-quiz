@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = @CMakeFiles/Hauptmenu.dir/includes_C.rsp
 
-C_FLAGS = -g -Wall -std=gnu11
+C_FLAGS = -O3 -DNDEBUG -Wall -std=gnu11
 

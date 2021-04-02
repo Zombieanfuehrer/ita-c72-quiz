@@ -71,21 +71,19 @@ CMAKE_BINARY_DIR = C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: cmake/all
 all: src/all
 all: app/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: cmake/preinstall
 preinstall: src/preinstall
 preinstall: app/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: cmake/clean
+clean: CMakeFiles/PruefungsQuiz_Doc.dir/clean
 clean: src/clean
 clean: app/clean
 
@@ -108,24 +106,6 @@ app/preinstall:
 app/clean: app/CMakeFiles/PruefungsQuiz_Executable.dir/clean
 
 .PHONY : app/clean
-
-#=============================================================================
-# Directory level rules for directory cmake
-
-# Recursive "all" directory target.
-cmake/all:
-
-.PHONY : cmake/all
-
-# Recursive "preinstall" directory target.
-cmake/preinstall:
-
-.PHONY : cmake/preinstall
-
-# Recursive "clean" directory target.
-cmake/clean:
-
-.PHONY : cmake/clean
 
 #=============================================================================
 # Directory level rules for directory src
@@ -154,6 +134,33 @@ src/clean: src/CMakeFiles/Quiz_Fragen_load.dir/clean
 src/clean: src/CMakeFiles/Quiz_Fragen_Gen.dir/clean
 
 .PHONY : src/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/PruefungsQuiz_Doc.dir
+
+# All Build rule for target.
+CMakeFiles/PruefungsQuiz_Doc.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PruefungsQuiz_Doc.dir\build.make CMakeFiles/PruefungsQuiz_Doc.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PruefungsQuiz_Doc.dir\build.make CMakeFiles/PruefungsQuiz_Doc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles --progress-num= "Built target PruefungsQuiz_Doc"
+.PHONY : CMakeFiles/PruefungsQuiz_Doc.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/PruefungsQuiz_Doc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/PruefungsQuiz_Doc.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Projekte\Cpp\dev\techniker-pruefung-quiz-2021\build\CMakeFiles 0
+.PHONY : CMakeFiles/PruefungsQuiz_Doc.dir/rule
+
+# Convenience name for target.
+PruefungsQuiz_Doc: CMakeFiles/PruefungsQuiz_Doc.dir/rule
+
+.PHONY : PruefungsQuiz_Doc
+
+# clean rule for target.
+CMakeFiles/PruefungsQuiz_Doc.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PruefungsQuiz_Doc.dir\build.make CMakeFiles/PruefungsQuiz_Doc.dir/clean
+.PHONY : CMakeFiles/PruefungsQuiz_Doc.dir/clean
 
 #=============================================================================
 # Target rules for target src/CMakeFiles/Quiz_Fragen_save.dir

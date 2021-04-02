@@ -11,8 +11,13 @@ else()
     add_compile_options(-Wall)
 endif()
 
+#C 11 Standart festlegen
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
+#Doxygen
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
+include(Documentation)      #doxygen
+
 #Applikation / Exectable definieren
 set(MAIN "${PROJEKT}_Executable")
 
@@ -25,7 +30,6 @@ set(_C_72_LOAD_FRAGENKATALOG "Quiz_Fragen_load")
 set(_C_72_START_QUIZ "Quiz_staten")
 
 #Unterverzeichnisse einbinden 
-add_subdirectory("${PROJECT_SOURCE_DIR}/cmake/")
 add_subdirectory("${PROJECT_SOURCE_DIR}/src/")
 add_subdirectory("${PROJECT_SOURCE_DIR}/app/")
 
