@@ -4,30 +4,26 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-#include <math.h>
 #include <stdlib.h>
 #include <time.h>
 
 //OS Bezogene Bibliotheken
 #ifdef _WIN32
     #include <windows.h>
-    #define Windows 1
-    #define Linux 0
-#endif //UNIX
+#endif //_WIN32
 
 #ifdef linux
     #include <unistd. h.>
-    #define Linux 1
-    #define Windows 0 
-#endif //UNIX
+#endif //linux
 
 #include "../include/PruefungsQuiz.h"
 
 #define Korrekt 0
 #define offset 1
+#define Prozentsatz 100
 
 float start(Fragenfeld *Quizfragen);
-Fragenfeld * mixQuestions(Fragenfeld *origin_Quizfragen); 
+void mixQuestions(Fragenfeld *ptr_rndQuizFragen, Fragenfeld *origin_Quizfragen); 
 
 
 #endif // _START_QUIZ_H_

@@ -19,12 +19,22 @@ float start(Fragenfeld *Quizfragen)
     char sEingabe[maxLEN_F_A] = {0};
     char sNaechsteFrage;
     bool usrCancel = false;
+    unsigned int anzahlFragen = 0;
+
+    //Anzahl an Fragen ermitteln
+    while (*Quizfragen->Frage && anzahlFragen <= maxFragen){
+        printf("[%d] %s\n",anzahlFragen,Quizfragen->Frage);
+        ++anzahlFragen;
+        ++Quizfragen;
+    }
+    Quizfragen = Quizfragen - anzahlFragen;
 
     while(*Quizfragen->Frage && !usrCancel)                         //Fragen stellen bis User beendet oder keine Fragen mehr vorhanden
-    {
-        //Frage ausgeben
-        printf("Frage: %s\n",Quizfragen->Frage);
+    {       
         ++Gestellt;                                                 //Frage wurde gestellt fuer %-Auswertung
+        printf("Frage %d von %d\n",Gestellt,anzahlFragen);
+        //Frage ausgeben
+        printf("%s",Quizfragen->Frage);                                                 
         //User Anwort abwarten
         fgets(sEingabe, maxLEN_F_A, stdin);
         //User Antwort korrekt?
@@ -33,33 +43,36 @@ float start(Fragenfeld *Quizfragen)
             ++korrekt;                                              //Frage korrekt beantwortet fuer %-Auswertung             
         }else printf("Falsch! Korrekte Loesung waere: %s gewesen.\n",Quizfragen->Antwort);
         //Weitere Frage stellen?
-        do{
-            printf("Moechten Sie noch eine Frage (J/N)? :");
-            scanf("%c",&sNaechsteFrage);
-            printf("\n");
-            if (sNaechsteFrage == 'N' || sNaechsteFrage == 'n'){
-                usrCancel = true;              
-            }else ++Quizfragen;
-        }while(sNaechsteFrage != 'J' && sNaechsteFrage != 'j' && sNaechsteFrage != 'N' && sNaechsteFrage != 'n'); 
-        sNaechsteFrage = 0;                                         //Reset 
-        fflush(stdin);                                              //stdin stream buffer leeren
+        if(Gestellt < anzahlFragen){
+            do{
+                printf("Moechten Sie noch eine Frage (J/N)? :");
+                scanf("%c",&sNaechsteFrage);
+                printf("\n");
+                if (sNaechsteFrage == 'N' || sNaechsteFrage == 'n'){
+                    usrCancel = true;              
+                }else ++Quizfragen;
+            }while(sNaechsteFrage != 'J' && sNaechsteFrage != 'j' && sNaechsteFrage != 'N' && sNaechsteFrage != 'n'); 
+            sNaechsteFrage = 0;                                     //Reset 
+            fflush(stdin);                                          //stdin stream buffer leeren
+        }else break; 
     }
     //Auswertung
-    return roundf(((Gestellt/korrekt) * -1) *10.0f)/10.0f;
+    return ((float)korrekt/(float)Gestellt) * Prozentsatz;
 }
 
-Fragenfeld * mixQuestions(Fragenfeld *origin_Quizfragen)
+void mixQuestions(Fragenfeld *mixed_Quizfragen,Fragenfeld *origin_Quizfragen)
 {
     //srand initialieren
     srand(time(NULL));
     //System-Pause um srand() abzuwarten
     printf("Warte srand() init ab\n");
-    if(Windows){
+    //#Praeprozessoranweisungen fuer sleep() thread pause
+    #ifdef _WIN32
         Sleep(2000);
-    }
-    else if(Linux){
+    #endif //_WIN32
+    #ifdef linux
         sleep(2.0);
-    }
+    #endif //UNIX
 
     //Variablen fuer Zuweisung zufaelliger Fragen
     unsigned int anzahlFragen = 0, rnd;
@@ -101,28 +114,12 @@ Fragenfeld * mixQuestions(Fragenfeld *origin_Quizfragen)
         }
         gesperrteZahlen[origin] = rnd;  //Gueltige Zufallszahl in Sperrliste zuweisen
         //Random-Quiz-Fragen Adresse nach Zufallszahl zuordnen   
-        memcpy_s(ptr_rndQuizFragen,(1* sizeof(Fragenfeld)),(origin_Quizfragen+(rnd-offset)),(1 * sizeof(Fragenfeld)));      //Frage+Antwort in "neue" Zufalls-Struktur koopieren
-        ++ptr_rndQuizFragen;    //"neue" Zufalls-Struktur auf's naechste Feld positionieren
+        memcpy_s(mixed_Quizfragen,(1* sizeof(Fragenfeld)),(origin_Quizfragen+(rnd-offset)),(1 * sizeof(Fragenfeld)));      //Frage+Antwort in "neue" Zufalls-Struktur koopieren
+        ++mixed_Quizfragen;    //"neue" Zufalls-Struktur auf's naechste Feld positionieren
     }
     //Addr. wieder auf den beginn setzten
-    ptr_rndQuizFragen = ptr_rndQuizFragen -anzahlFragen;
+    mixed_Quizfragen = mixed_Quizfragen -anzahlFragen;
     //Adresse mit 0 besetzten, um Ende des Arrays zu kennzeichenen.
-    ptr_rndQuizFragen->Frage[anzahlFragen] = 0;
-    ptr_rndQuizFragen->Antwort[anzahlFragen] = 0;
-
-    /*
-    anzahlFragen = 0;
-    while(*ptr_rndQuizFragen->Frage)
-    {
-        anzahlFragen++;
-        printf("NR.: %d\n",anzahlFragen);
-        printf("%s\n",ptr_rndQuizFragen->Frage);
-        printf("%s\n",ptr_rndQuizFragen->Antwort);
-        ++ptr_rndQuizFragen;
-    }
-    printf("wENDE %i \n",anzahlFragen);
-    while(getchar() != '\n');
-    */
-    //Zeiger auf den "gemischten" Fragen-Katalog zurueckgeben
-    return ptr_rndQuizFragen;
+    mixed_Quizfragen->Frage[anzahlFragen] = 0;
+    mixed_Quizfragen->Antwort[anzahlFragen] = 0;
 }

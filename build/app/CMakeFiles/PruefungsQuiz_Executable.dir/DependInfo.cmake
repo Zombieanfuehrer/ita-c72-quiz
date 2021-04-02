@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Dev/C/quiz/app/main.c" "C:/Dev/C/quiz/build/app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.obj"
+  "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/app/main.c" "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/app/CMakeFiles/PruefungsQuiz_Executable.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

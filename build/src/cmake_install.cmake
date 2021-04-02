@@ -1,4 +1,4 @@
-# Install script for directory: C:/Dev/C/quiz/src
+# Install script for directory: C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/cygwin64/bin/x86_64-w64-mingw32-objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Qt/Tools/mingw810_64/bin/objdump.exe")
 endif()
 

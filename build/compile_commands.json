@@ -1,37 +1,37 @@
 [
 {
-  "directory": "C:/Dev/C/quiz/build/src",
-  "command": "C:/cygwin64/bin/x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Saved_Data_Index.dir/includes_C.rsp -g -o CMakeFiles/Saved_Data_Index.dir/file_index.c.obj -c C:/Dev/C/quiz/src/file_index.c",
-  "file": "C:/Dev/C/quiz/src/file_index.c"
+  "directory": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Saved_Data_Index.dir/includes_C.rsp -g -o CMakeFiles\\Saved_Data_Index.dir\\file_index.c.obj -c C:\\Projekte\\Cpp\\dev\\techniker-pruefung-quiz-2021\\src\\file_index.c",
+  "file": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/src/file_index.c"
 },
 {
-  "directory": "C:/Dev/C/quiz/build/src",
-  "command": "C:/cygwin64/bin/x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Quiz_Fragen_save.dir/includes_C.rsp -g -o CMakeFiles/Quiz_Fragen_save.dir/save_fragenfeld.c.obj -c C:/Dev/C/quiz/src/save_fragenfeld.c",
-  "file": "C:/Dev/C/quiz/src/save_fragenfeld.c"
+  "directory": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Quiz_Fragen_save.dir/includes_C.rsp -g -o CMakeFiles\\Quiz_Fragen_save.dir\\save_fragenfeld.c.obj -c C:\\Projekte\\Cpp\\dev\\techniker-pruefung-quiz-2021\\src\\save_fragenfeld.c",
+  "file": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/src/save_fragenfeld.c"
 },
 {
-  "directory": "C:/Dev/C/quiz/build/src",
-  "command": "C:/cygwin64/bin/x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Hauptmenu.dir/includes_C.rsp -g -o CMakeFiles/Hauptmenu.dir/menue.c.obj -c C:/Dev/C/quiz/src/menue.c",
-  "file": "C:/Dev/C/quiz/src/menue.c"
+  "directory": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Hauptmenu.dir/includes_C.rsp -g -o CMakeFiles\\Hauptmenu.dir\\menue.c.obj -c C:\\Projekte\\Cpp\\dev\\techniker-pruefung-quiz-2021\\src\\menue.c",
+  "file": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/src/menue.c"
 },
 {
-  "directory": "C:/Dev/C/quiz/build/src",
-  "command": "C:/cygwin64/bin/x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Quiz_staten.dir/includes_C.rsp -g -o CMakeFiles/Quiz_staten.dir/start_quiz.c.obj -c C:/Dev/C/quiz/src/start_quiz.c",
-  "file": "C:/Dev/C/quiz/src/start_quiz.c"
+  "directory": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Quiz_staten.dir/includes_C.rsp -g -o CMakeFiles\\Quiz_staten.dir\\start_quiz.c.obj -c C:\\Projekte\\Cpp\\dev\\techniker-pruefung-quiz-2021\\src\\start_quiz.c",
+  "file": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/src/start_quiz.c"
 },
 {
-  "directory": "C:/Dev/C/quiz/build/src",
-  "command": "C:/cygwin64/bin/x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Quiz_Fragen_load.dir/includes_C.rsp -g -o CMakeFiles/Quiz_Fragen_load.dir/load_fragenfeld.c.obj -c C:/Dev/C/quiz/src/load_fragenfeld.c",
-  "file": "C:/Dev/C/quiz/src/load_fragenfeld.c"
+  "directory": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Quiz_Fragen_load.dir/includes_C.rsp -g -o CMakeFiles\\Quiz_Fragen_load.dir\\load_fragenfeld.c.obj -c C:\\Projekte\\Cpp\\dev\\techniker-pruefung-quiz-2021\\src\\load_fragenfeld.c",
+  "file": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/src/load_fragenfeld.c"
 },
 {
-  "directory": "C:/Dev/C/quiz/build/src",
-  "command": "C:/cygwin64/bin/x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Quiz_Fragen_Gen.dir/includes_C.rsp -g -o CMakeFiles/Quiz_Fragen_Gen.dir/generator.c.obj -c C:/Dev/C/quiz/src/generator.c",
-  "file": "C:/Dev/C/quiz/src/generator.c"
+  "directory": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/src",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Quiz_Fragen_Gen.dir/includes_C.rsp -g -o CMakeFiles\\Quiz_Fragen_Gen.dir\\generator.c.obj -c C:\\Projekte\\Cpp\\dev\\techniker-pruefung-quiz-2021\\src\\generator.c",
+  "file": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/src/generator.c"
 },
 {
-  "directory": "C:/Dev/C/quiz/build/app",
-  "command": "C:/cygwin64/bin/x86_64-w64-mingw32-gcc.exe  @CMakeFiles/PruefungsQuiz_Executable.dir/includes_C.rsp -g -o CMakeFiles/PruefungsQuiz_Executable.dir/main.c.obj -c C:/Dev/C/quiz/app/main.c",
-  "file": "C:/Dev/C/quiz/app/main.c"
+  "directory": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/build/app",
+  "command": "C:\\Qt\\Tools\\mingw810_64\\bin\\x86_64-w64-mingw32-gcc.exe  @CMakeFiles/PruefungsQuiz_Executable.dir/includes_C.rsp -g -o CMakeFiles\\PruefungsQuiz_Executable.dir\\main.c.obj -c C:\\Projekte\\Cpp\\dev\\techniker-pruefung-quiz-2021\\app\\main.c",
+  "file": "C:/Projekte/Cpp/dev/techniker-pruefung-quiz-2021/app/main.c"
 }
 ]
