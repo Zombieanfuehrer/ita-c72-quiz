@@ -1,10 +1,15 @@
 #include "../include/file_index.h"
-
-
+/**
+ * @brief Index_Erweitern fuegt in index.dat einen neuen Eintrag hinzu oder erstellt die index.dat sofern nicht vorhanden.
+ * In dieser Datei sind alle Dateinamen der gespeicherten "Fragen-Kataloge" hinterlegt.
+ * @param Dateiname Zeiger auf einen String mit dem anzuhaengenden Dateinamen des gespeicherten Fragen-Katalogs.
+ * @return true Index.dat wurde erfolgreich erweitert.
+ * @return false Index.dat konnte nicht erweitert werden, details siehe stderr.
+ */
 bool Index_Erweitern(const char * Dateiname)
 {
     FILE * INDEX;
-    int status = 0;
+    size_t status = 0;
 
     //Index gueltig
     INDEX = fopen(index_dat,"r");
@@ -31,7 +36,11 @@ bool Index_Erweitern(const char * Dateiname)
     }
     return false;   
 }
-
+/**
+ * @brief Index_Auslesen oeffnet die index.dat und gibt die hinterlegten Dateinamen der gespeicherten Fragen-Kataloge aus. 
+ * @param stream_gespeicherte_Files Zeiger auf einen String aus Chars in dem die Ausgelesenen Dateinamen geschrieben werden. 
+ * @return char* Zeiger auf einen uebergabe param. String aus Chars in dem die Ausgelesenen Dateinamen geschrieben werden. 
+ */
 char* Index_Auslesen(char * stream_gespeicherte_Files)
 {
     FILE * INDEX;

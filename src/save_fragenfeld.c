@@ -3,10 +3,10 @@
 /**
  * @brief Bestimmten ASCII-Char in String finden und mit dem uebergebenen Param. ersetzten
  *  Gefunden unter https://stackoverflow.com/questions/32496497/standard-function-to-replace-character-or-substring-in-a-char-array/32496721
- * @param str 
- * @param find 
- * @param replace 
- * @return char* 
+ * @param str Zeiger auf den zu durchsuchenden/bearbeitenden String
+ * @param find Zeichen/Char welches im Sring gefunden und ersetzt werden soll
+ * @param replace Zeichen welches anstellelle des als "find" definierten Zeichens/Chars in den String kopiert wird.
+ * @return char* Zeiger auf die Adresse des urspruenglichen Strings.
  */
 char* replace_char(char* str, char find, char replace){
     char *current_pos = strchr(str,find);
@@ -17,6 +17,11 @@ char* replace_char(char* str, char find, char replace){
     return str;
 }
 
+/**
+ * @brief der Uhrzeitteil des Zeitstempel aus dem von asctime() zurueckgegebenen String wird geloescht.
+ * @param strASCTIME Zeiger auf einen String "Thu Mar 26 06:00:48 2009 \0" der bearbeitet werden soll.
+ * @return char* Zeiger auf den Ursprungsstring umformatiert "Thu Mar 26 2009 \0"
+ */
 char* Zeit_Stempel_loeschen(char* strASCTIME){
     unsigned int HHMMSS = 0;
 
@@ -35,6 +40,14 @@ char* Zeit_Stempel_loeschen(char* strASCTIME){
     return strASCTIME;   
 }
 
+/**
+ * @brief Fragen_in_datei_speichern speichert den uebergebenen Fragen-Katalog in eine .txt Datei.
+ * Per default ist der Dateiname der durch Zeit_Stempel_loeschen() bearbeitete asctime()-String, der User kann aber auch einen eigenen Dateinamen vorgeben.
+ * Anschliessend wird mit Index_Erweitern(Dateiname) die Index.dat erzeugt o. erweitert um die Datei zu einem spaeteren Zeitpunkt laden zu koennen.
+ * @param Quizfragen Zeiger auf eine Adresse vom Datentyp Fragenfeld bzw. Array der Fragen-Katalog.
+ * @return true Datei erfolgreich gespeichert.
+ * @return false Datei konnte nicht gespeichert werden, details stderr.
+ */
 bool Fragen_in_datei_speichern(Fragenfeld *Quizfragen)
 {
     FILE * save_stream;

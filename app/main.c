@@ -12,7 +12,7 @@
 
 /**
  * @brief Pruefungsquiz application
- * 
+ * Aufgabe von ITA-C72 KUR Carl-Severing-Berufskolleg FET7U
  * @param argc ohne Funktion
  * @param argv ohne Funktion
  * @return int = 0 Pruefungsquiz vom User beendet

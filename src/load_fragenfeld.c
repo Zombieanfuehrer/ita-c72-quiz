@@ -1,6 +1,10 @@
 #include "../include/load_fragenfeld.h"
 
-
+/**
+ * @brief Ueber Datei_auswaehlen soll dem User angezeigt werden welche Dateien gespeichert sind und er eine von diesen auswaehlen kann.
+ * @param usrAuswahl Zeiger auf einen String in dem der von User ausgewaehlte Dateiname des Fragen-Katalogs geschrieben wird. 
+ * @return char* Zeiger auf einen String, aus dem Uebergabeparam. in dem der von User ausgewaehlte Dateiname des Fragen-Katalogs geschrieben wird.
+ */
 char * Datei_auswaehlen(char * usrAuswahl)
 {
     unsigned int Anzahl = 1;
@@ -51,6 +55,12 @@ char * Datei_auswaehlen(char * usrAuswahl)
     return usrAuswahl;
 }
 
+/**
+ * @brief Fragen_Katalog_einlesen oeffnet die vom User ausgewaehlte Fragen-Katalog-Datei und liest die Inhalte in den Speicher ein.
+ * @param Dateiname Der Dateiname der zu oeffnenden Fragen-Katalog.txt Datei.
+ * @param Quizfragen Zeiger auf Adresse vom Datentyp Fragenfeld, in dem die ausgelesenen Werte geschrieben werden.
+ * @return int die Anzahl der ausgelesenen Datensaetze (Frage+Antwort)
+ */
 int Fragen_Katalog_einlesen(const char * Dateiname, Fragenfeld *Quizfragen)
 {
     FILE * Fragenkatalog;

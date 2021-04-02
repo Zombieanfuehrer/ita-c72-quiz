@@ -1,6 +1,15 @@
 #ifndef _FILE_INDEX_H_
 #define _FILE_INDEX_H_
-
+/**
+ * @file file_index.h
+ * @author David A. Haufe (david.haufe90@gmail.com)
+ * @brief Bibliothek zum speicher/laden eines Fragen-Katalogs.
+ * @version 1.0
+ * @date 2021-03-10
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>

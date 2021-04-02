@@ -1,5 +1,11 @@
 #include "../include/generator.h"
-
+/**
+ * @brief User kann eigene Quizfragen und entsprechende Antworten in einen Fragen-Katalog schreiben.
+ * Der User gibt Fragen und Antworten in einen Array von Datentyp "Fragenfeld" vor, dieser ist in PruefungsQuiz definiert.
+ * Ueber die eingabe einer '0' vom User wird das erzeugen der Quiz-Fragen beendet.
+ * Anschliessend wird der Fragenkatalog ueber die Funktion "Fragen_in_datei_speichern()" gespeichert, diese Funktion ist unter save_fragenfeld.c definiert.
+ * @param Quizfragen ein Pointer auf ein Datentyp Fragenfeld, respektive ein Array aus Fragenfeld, in welchem die Fragen & Antworten geschrieben werden.
+ */
 int Fragen_einlesen(Fragenfeld *Quizfragen) 
 { 
     char *sEingabe = calloc(maxLEN_F_A,sizeof(char));

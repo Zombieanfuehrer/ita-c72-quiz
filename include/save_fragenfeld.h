@@ -1,6 +1,15 @@
 #ifndef _SAVE_FRAGENFELD_H_
 #define _SAVE_FRAGENFELD_H_
-
+/**
+ * @file save_fragenfeld.h
+ * @author David A. Haufe (david.haufe90@gmail.com)
+ * @brief Bibliothek zum speichern eines Fragen-Katalogs.
+ * @version 1.0
+ * @date 2021-03-10
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <stdio.h>
 #include <stdbool.h>
 #include <time.h>

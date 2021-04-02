@@ -3,6 +3,16 @@ cmake_minimum_required(VERSION 3.12)
 set(PROJEKT "PruefungsQuiz")
 project("${PROJEKT}" VERSION 1.0.0 LANGUAGES C)
 
+if (MSVC)
+    # warning level 4 and all warnings as errors
+    add_compile_options(/W4 /WX)
+else()
+    # lots of warnings and all warnings as errors
+    add_compile_options(-Wall)
+endif()
+
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED ON)
 #Applikation / Exectable definieren
 set(MAIN "${PROJEKT}_Executable")
 
